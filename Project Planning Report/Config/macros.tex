@@ -1,0 +1,142 @@
+\newcommand{\Q}{Q1} 
+
+\newcounter{myWeekNum}
+\stepcounter{myWeekNum}
+%
+\newcommand{\myWeek}{\themyWeekNum
+    \stepcounter{myWeekNum}
+    \ifnum\themyWeekNum=53
+         \setcounter{myWeekNum}{1}
+    \else\fi
+}
+\renewcommand{\baselinestretch}{0.9} 
+
+\newcommand{\riskcell}[1]{%
+    \FPeval\result{round(#1*100,0)} % Convert risk (0-1) to percentage for coloring
+    \ifdim#1pt<0.3pt % If the risk is less than 0.3
+        \cellcolor{green!30}#1%
+    \else\ifdim#1pt<0.6pt % If the risk is between 0.3 and 0.6
+        \cellcolor{yellow!30}#1%
+    \else % If the risk is 0.6 or above
+        \cellcolor{red!30}#1%
+    \fi\fi
+}
+% \newcommand{\risk}[3]{#1 & \riskcell{#2} & \riskcell{#3}}
+
+%
+\crefname{deliverable}{deliverable}{deliverables}
+\newtheorem{deliverable}{deliverable}
+
+\def\mystartdate{2024-10-01}%starting date of the calendar
+\def\myenddate{2025-05-30}%ending date of the calendar
+\def\myxunit{0.7mm}%width of 1 day
+
+\definecolor{gray}{HTML}{7F7F7F}
+\definecolor{blue}{HTML}{1F77B4}
+
+% \newcommand{\cc\1}{red!50} % phase 1 color
+% \newcommand{\cc2}{magenta!50} % phase 2 color
+% \newcommand{\cc3}{teal!50} % phase 3 color
+% \newcommand{\cc4}{cyan!50} % phase 4 color
+% \newcommand{\cc5}{blue!50} % phase 5 color
+% \newcommand{\cc6}{purple!50} % phase 6 color
+% \newcommand{\test123}{hi}
+
+\usepackage{ifthen}  % For conditional statements
+
+\newcommand{\Theme}[2]{%
+  \ifthenelse{\equal{#1}{1}}{\textcolor{red!50}{#2}}{}%
+      \ifthenelse{\equal{#1}{2}}{\textcolor{magenta!50}{#2}}{}%
+      \ifthenelse{\equal{#1}{3}}{\textcolor{teal!50}{#2}}{}%
+      \ifthenelse{\equal{#1}{4}}{\textcolor{cyan!50}{#2}}{}%
+      \ifthenelse{\equal{#1}{5}}{\textcolor{blue!50}{#2}}{}%
+      \ifthenelse{\equal{#1}{6}}{\textcolor{purple!50}{#2}}{}% 
+}
+
+\newcommand{\theme}[1]{%
+      \ifthenelse{\equal{#1}{1}}{red!50}{}%
+      \ifthenelse{\equal{#1}{2}}{magenta!50}{}%
+      \ifthenelse{\equal{#1}{3}}{teal!50}{}%
+      \ifthenelse{\equal{#1}{4}}{cyan!50}{}%
+      \ifthenelse{\equal{#1}{5}}{blue!50}{}%
+      \ifthenelse{\equal{#1}{6}}{purple!50}{}%
+}
+
+
+\newenvironment{conditions}[1][where:]
+  {#1 \begin{tabular}[t]{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\\[\belowdisplayskip]}
+
+\makeatletter
+% \renewcommand{\subsubsubsection}{\@startsection{paragraph}{4}{0ex}%
+%    {-3.25ex plus -1ex minus -0.2ex}%
+%    {1.5ex plus 0.2ex}%
+%    {\normalfont\normalsize\bfseries}}
+% \makeatother
+
+\stepcounter{secnumdepth}
+\stepcounter{tocdepth}
+
+% \renewcommand{\today}{\the\year-\two@digits{\the\month}-\two@digits{\the\day}}
+\renewcommand{\thedate}{\the\year-\two@digits{\the\month}-\two@digits{\the\day}}
+
+
+\makeatletter
+% Save the original \section command
+\let\oldsection\section
+% Redefine the \section command to handle both optional arguments and the star variant
+\renewcommand{\section}{\@ifstar{\mysectionstar}{\@ifnextchar[{\mysectionopt}{\mysection}}}
+% Define the version of \section with a star (unnumbered)
+\newcommand{\mysectionstar}[1]{%
+  \def\currentsec{#1}% Update to use a more specific variable name
+  \oldsection*{#1}%
+}
+% Define the version of \section with an optional argument
+\newcommand{\mysectionopt}[2][]{%
+  \def\currentsec{#2}% Update to use a more specific variable name
+  \oldsection[#1]{#2}%
+}
+% Define the version of \section without an optional argument
+\newcommand{\mysection}[1]{%
+  \def\currentsec{#1}% Update to use a more specific variable name
+  \oldsection{#1}%
+}
+
+% Assuming similar functionality is desired for \subsection,
+% you would follow a similar pattern:
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{\@ifstar{\mysubsectionstar}{\@ifnextchar[{\mysubsectionopt}{\mysubsection}}}
+\newcommand{\mysubsectionstar}[1]{%
+  \def\currentsubsec{#1}% Update to use a more specific variable name
+  \oldsubsection*{#1}%
+}
+\newcommand{\mysubsectionopt}[2][]{%
+  \def\currentsubsec{#2}% Update to use a more specific variable name
+  \oldsubsection[#1]{#2}%
+}
+\newcommand{\mysubsection}[1]{%
+  \def\currentsubsec{#1}% Update to use a more specific variable name
+  \oldsubsection{#1}%
+}
+\makeatother
+
+\newcommand{\inputsubsection}[1]{%
+  \subsection{#1}%
+  \input{Src/\currentsec/\currentsubsec/main.tex}%
+}
+
+\newcommand{\inputsubsubsection}[1]{%
+  \subsubsection{#1}%
+  \input{Src/\currentsec/\currentsubsec/#1.tex}%
+}
+
+\newcommand{\Diagram}[2]{%
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Src/\currentsec/\currentsubsec/#1}
+    \caption{#2}
+    \label{fig:#1}
+  \end{figure}
+  \FloatBarrier
+}
+
