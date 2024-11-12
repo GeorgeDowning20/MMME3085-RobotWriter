@@ -1,0 +1,72 @@
+name: Cross-Platform Build and Run (Windows, macOS, Linux)
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-run-windows:
+    name: Windows Build and Run with MSYS2
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up MSYS2
+        uses: msys2/setup-msys2@v2
+        with:
+          update: true
+          path-type: inherit
+
+      - name: Install dependencies on Windows
+        shell: msys2 {0}
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm make gcc
+
+      - name: Build and Run the project on Windows
+        shell: msys2 {0}
+        run: |
+          cd RobotWriter  # Adjust if your project directory is different
+          make run
+
+  build-and-run-macos:
+    name: macOS Build and Run
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies on macOS
+        run: |
+          brew update
+          brew install make gcc || true  # gcc is usually installed, so ignore error if it is
+
+      - name: Build and Run the project on macOS
+        run: |
+          cd RobotWriter  # Adjust if your project directory is different
+          make run
+
+  build-and-run-linux:
+    name: Linux Build and Run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies on Linux
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make gcc
+
+      - name: Build and Run the project on Linux
+        run: |
+          cd RobotWriter  # Adjust if your project directory is different
+          make CFLAGS="-D_DEFAULT_SOURCE" run

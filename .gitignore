@@ -1,0 +1,85 @@
+# General
+.DS_Store
+*.log
+*.out
+*.aux
+*.tmp
+*.bak
+*~
+
+
+# C Project
+*.o
+*.obj
+*.so
+*.a
+*.dylib
+*.dll
+*.exe
+*.out
+*.stackdump
+*.elf
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+build/
+Makefile
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.glo
+*.glg
+*.gls
+*.ist
+*.lof
+*.lot
+*.lol
+*.toc
+*.synctex.gz
+*.acn
+*.acr
+*.alg
+*.idx
+*.ilg
+*.ind
+*.thm
+*.nav
+*.snm
+*.vrb
+
+# Output files
+*.pdf
+*.dvi
+*.ps
+*.synctex
+*.log
+*.out
+*.gz
+*.xdv
+*.bbl
+*.blg
+
+# LaTeX build directories
+_texbuild/
+_minted-main/
+*.pdfsync
+*.pdfsync.bak
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Others
+*.swp
+*.swo
+*.swn
+
+!Doxyfile
+!Makefile

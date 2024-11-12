@@ -1,0 +1,28 @@
+name: Generate and Deploy Doxygen Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Doxygen
+        run: sudo apt-get install doxygen graphviz
+
+      - name: Generate Documentation
+        run: |
+          doxygen RobotWriter/Doxyfile
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs  # Deploy only the contents of the html directory
+          publish_branch: gh-pages
+          force_orphan: true
