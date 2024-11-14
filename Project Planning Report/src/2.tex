@@ -1,0 +1,72 @@
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+typedef struct stroke_s{
+    double x;
+    double y;
+    bool pen_state;
+} stroke_t;
+
+typedef struct fontCharacter_s{
+    char ascii_key;
+    uint8_t num_strokes;
+    stroke_t *strokes;
+} fontCharacter_t;
+
+typedef struct cursor_s {
+    double x, y;
+}cursor_t;
+
+typedef struct hashNode_s {
+    char key;
+    fontCharacter_t *character;
+    struct hashNode_s *next;
+} hashNode_t;
+
+typedef struct fontData_s {
+    double scale:
+    hashNode_t *table[128]; // Hash table
+} fontData_t;
+\end{minted}
+
+\begin{table}[h!]
+    \centering
+    \adjustbox{max width=\textwidth}{%
+    \begin{tabular}{|l|>{\raggedright\arraybackslash}m{0.15\textwidth}|>{\raggedright\arraybackslash}m{0.7\textwidth}|}
+    \hline
+    \textbf{Name}         & \textbf{Data Type}               & \textbf{Rationale}                                                                                      \\ \hline
+
+    \textbf{file} & 
+    FILE
+    & part of stdio.h, used to define a file which can be opened with fopen() and worked on with other functions\\ \hline
+
+    \textbf{scale} & 
+    double
+    & used to scale the gcode font file and character spacing, double for fine presision.\\ \hline
+
+
+
+    \textbf{strokes}       & 
+    stroke\_t*
+    & structure to hold a single stroke, x and y are double to preserve high presision, and the pen state is bolean because it has 2 states, on or off. memory will be allocated using malloc, so the data type is a pointer hence acts as array \\ \hline
+    
+    \textbf{fontCharacter}     & 
+    fontCharacter\_t*
+    & Holds the array of strokes and the metadata for a single character. Because the strokes are dynamically allocated memory, the number of strokes is required to know the length of the array of strokes. A char is one byte and, therefore, can hold all combinations of 128 ASCII codes. num\_strokes is assigned as an 8-bit unsigned integer, where negative values are impossible, and more than 255 is unlikely. memory will be allocated using malloc, so the data type is a pointer hence acts as array.\\ \hline
+    
+    \textbf{Cursor}       & 
+    static cursor\_t
+    & Tracks the current position of the "pen" on the robot's surface for precise placement of letters. double allows for floating point presision. will be declared as static within the generate\_gcode function to keep track of the cursor position. \\ \hline
+
+    \textbf{hashTable} & 
+    hashNode\_t*
+    & a pointer to the hash table array, contains the key which is used in the hash function to find the correct FontCharacter pointer. although not neccassary becasue the data ascii font file data is sequencial, a HashNode\_s structure pointer is used for collision handling. memory will be allocated using malloc, so the data type is a pointer hence acts as array.\\ \hline
+    
+    \textbf{Font Data} & 
+    fontData\_t*
+    & A container for holding the hash table array. also holds the scale factor to be used for determining white space. double to preserve presision.\\ \hline
+    
+    \end{tabular}
+    }
+    \caption{Primary Data Types for the G-code Printing Program}
+    \label{tab:data_types}
+    \end{table}
