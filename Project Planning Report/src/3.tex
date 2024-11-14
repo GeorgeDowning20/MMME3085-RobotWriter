@@ -1,0 +1,61 @@
+
+    
+
+    \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+int hash_table_insert(fontData_t *hash_table, const char ascii_key, fontCharacter_t *character);
+        \end{minted}
+        \textbf{Breif:} Inserts a font character into the hash table. \\
+        \textbf{Parameters:} \\
+        \hspace*{1cm}\texttt{hash\_table} -- Pointer to the hash table. \\
+        \hspace*{1cm}\texttt{ascii\_key} -- ASCII key for the font character. \\
+        \hspace*{1cm}\texttt{character} -- Pointer to the font character to insert. \\
+        \textbf{Returns:} \\
+        \hspace*{1cm}0 on success, -1 on failure. \\[1em]
+        
+        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+const fontCharacter_t *hash_table_lookup(const fontData_t *hash_table, const char ascii_key);
+        \end{minted}
+        \textbf{Breif:} Looks up a font character in the hash table by ASCII key. \\
+        \textbf{Parameters:} \\
+        \hspace*{1cm}\texttt{hash\_table} -- Pointer to the hash table. \\
+        \hspace*{1cm}\texttt{ascii\_key} -- ASCII key of the font character to retrieve. \\
+        \textbf{Returns:} \\
+        \hspace*{1cm}Pointer to the corresponding fontCharacter\_t, or \texttt{NULL} if not found. \\[1em]
+        
+        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+void parse_font_file(FontData *font_data, const char *filename);
+        \end{minted}
+        \textbf{Breif:} Parses the font file and populates a hash table with font characters. \\
+        \textbf{Parameters:} \\
+        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to populate. \\
+        \hspace*{1cm}\texttt{filename} -- Name of the font file to parse. \\
+        
+        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+void scale_font_data(FontData *font_data);
+        \end{minted}
+        \textbf{Breif:} Scales the font data by a given factor. \\
+        \textbf{Parameters:} \\
+        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to scale. \\
+
+        
+        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+void process_text_file(const FontData *font_data);
+        \end{minted}
+        \textbf{Breif:} Processes a text file and generates G-code for the text. \\
+        \textbf{Parameters:} \\
+        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to use, also containing scale for whitespace between characters. \\[1em]
+        
+        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+void generate_gcode(const FontData *font_data, const char *text);
+        \end{minted}
+        \textbf{Breif:} Generates G-code for a given text string. \\
+        \textbf{Parameters:} \\
+        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to use, also containing scale for whitespace between characters. \\
+        \hspace*{1cm}\texttt{text} -- Text string (single word) to generate G-code for.
+
+        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+void free_font_data(fontData_t *font_data);
+        \end{minted}
+        \textbf{Breif:} Frees the memory allocated for the font data. itterate through all hashNode\_t,fontCharacter\_t and strokes\_t to free memory allocated by malloc\\
+        \textbf{Parameters:} \\
+        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to be freed.
