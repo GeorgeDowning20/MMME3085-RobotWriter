@@ -1,0 +1,253 @@
+
+\begin{longtable}{|>{\raggedright\arraybackslash}m{0.17\textwidth}|>{\raggedright\arraybackslash}m{0.2\textwidth}|>{\raggedright\arraybackslash}m{0.2\textwidth}|>{\raggedright\arraybackslash}m{0.35\textwidth}|}
+    \hline
+    \textbf{Function} & \textbf{Test Case} & \textbf{Test Data} & \textbf{Expected Output} \\ \hline
+    parse\_font\_file & empty filename & filename="" & Error message: "Filename is empty" \\ \hline
+    parse\_font\_file & fopen() fails & filename="font.exe" & Error message: "unable to open file" \\ \hline
+    parse\_font\_file & memory allocation fails & Simulate malloc failure  &  Error message: "Memory allocation failed" \\ \hline
+    parse\_font\_file & normal case & filename= "SingleStrokeFont.txt" &  normal operation: calls hash\_table\_insert(), 128 times \\ \hline
+    hash\_table\_insert & NULL hastable & hash\_table=NULL & Error message: "Hash table is NULL" \\ \hline
+    hash\_table\_insert & NULL character & character=NULL & Error message: "Character is NULL" \\ \hline
+    hash\_table\_insert & memory allocation fails & Simulate malloc failure  &  Error message: "Memory allocation failed" \\ \hline
+    hash\_table\_insert & normal case & ascii\_key=0, character=fontCharacter\_t &  normal operation: inserts fontCharacter into hash table \\ \hline
+    hash\_table\_insert & insert multiple characters & insert 'A', 'B', 'C' &  normal operation: inserts fontCharacter into hash table \\ \hline
+    hash\_table\_insert & confirm correct operation with hash\_table\_lookup & *font\_char = hash\_table\_lookup( font\_data, key) & font\_char$->$ascii\_key == Key \\ \hline
+    hash\_table\_lookup & NULL hastable & hash\_table=NULL & Error message: "Hash table is NULL" \\ \hline
+    hash\_table\_lookup & normal case & ascii\_key=0 &  normal operation: returns fontCharacter from hash table with key 0\\ \hline
+    hash\_table\_lookup & look up character that doesnt exist & ascii\_key=999 &  Error message: "Character not found" \\ \hline
+    scale\_font\_data & NULL font\_data & font\_data=NULL & Error message: "Font data is NULL" \\ \hline
+    scale\_font\_data & input not between 4-10mm & 11 & Error message: "Input not between 4-10mm" \\ \hline
+    scale\_font\_data & test with 'A' 4mm & \footnotesize$\begin{array}{ccc}
+        999 &65 &6 \\
+        0 &0 &0\\
+        6 &18& 1\\
+        12 &0& 1\\
+        3 &9& 0\\
+        9& 9& 1\\
+        18 &0& 0\\
+        \end{array}$ & \footnotesize$\begin{array}{ccc}
+        999 &65 &6 \\
+        0 &0 &0\\
+        1.33 &4.00& 1\\
+        2.67 &0& 1\\
+        0.67 &2.00& 0\\
+        2.00& 2.00& 1\\
+        4.00 &0& 0\\
+        \end{array}$ \\ \hline
+        scale\_font\_data & test with 'A' 10mm & \footnotesize$\begin{array}{ccc}
+            999 &65 &6 \\
+            0 &0 &0\\
+            6 &18& 1\\
+            12 &0& 1\\
+            3 &9& 0\\
+            9& 9& 1\\
+            18 &0& 0\\
+            \end{array}$ & \footnotesize$\begin{array}{ccc}
+            999 &65 &6 \\
+            0 &0 &0\\
+            3.33 &10.00& 1\\
+            6.67 &0& 1\\
+            1.67 &5.00& 0\\
+            5.00& 5.00& 1\\
+            10.00 &0& 0\\
+            \end{array}$ \\ \hline
+    process\_text\_file & NULL font\_data & font\_data=NULL & Error message: "Font data is NULL" \\ \hline
+    process\_text\_file & fopen() fails & filename="text.exe" & Error message: "unable to open file" \\ \hline
+    process\_text\_file & Test each word read indvidually & "Hello World" &  normal operation: calls generate\_gcode() twice \\ \hline
+    generate\_gcode & NULL font\_data & font\_data=NULL & Error message: "Font data is NULL" \\ \hline
+    generate\_gcode & test $\backslash$n mechanism & text[0] = "$\backslash$n" & cursor moves to next line with 5mm line spaace\\ \hline
+    generate\_gcode & test normal case & text[0] = "A" &  normal operation: calls hash\_table\_lookup() and sends G-code to robot, waits of ok response after every send. \\ \hline
+    generate\_gcode & 4mm test 'A' output & text[0] = "A " & \footnotesize$\begin{array}{cccl}
+        G0 &X0.00 &Y0.00; & pen\ up\\
+        G1 &X1.33 &Y4.00; & pen\ down\\
+        G1 &X2.67 &Y0.00; & pen\ down\\
+        G0 &X0.67 &Y2.00; & pen\ up\\
+        G1 &X2.00 &Y2.00; & pen\ down\\
+        G0 &X4.00 &Y0.00; & pen\ down\\
+        G0 &x0 &y0; & pen\ up\\
+        \end{array}$ \\ \hline
+    generate\_gcode & 10mm test 'A' output & text[0] = "A " & \footnotesize$\begin{array}{cccl}
+        G0 &X0.00 &Y0.00; & pen\ up\\
+        G1 &X3.33 &Y10.00; & pen\ down\\
+        G1 &X6.67 &Y0.00; & pen\ down\\
+        G0 &X1.67 &Y5.00; & pen\ up\\
+        G1 &X5.00 &Y5.00; & pen\ down\\
+        G0 &X10.00 &Y0.00; & pen\ down\\
+        G0 &x0 &y0; & pen\ up\\
+        \end{array}$ \\ \hline
+    generate\_gcode & test multiple letters checking for proper character spacing with 4mm spacing & text[0] = "AA " &  \footnotesize$\begin{array}{cccl}
+        G0 &X0.00 &Y0.00; & pen\ up\\
+        G1 &X1.33 &Y4.00; & pen\ down\\
+        G1 &X2.67 &Y0.00; & pen\ down\\
+        G0 &X0.67 &Y2.00; & pen\ up\\
+        G1 &X2.00 &Y2.00; & pen\ down\\
+        G0 &X4.00 &Y0.00; & pen\ down\\
+        G0 &X4.00 &Y0.00; & pen\ up\\
+        G1 &X5.33 &Y4.00; & pen\ down\\
+        G1 &X6.67 &Y0.00; & pen\ down\\
+        G0 &X4.67 &Y2.00; & pen\ up\\
+        G1 &X6.00 &Y2.00; & pen\ down\\
+        G0 &X8.00 &Y0.00; & pen\ up\\
+        G0 &X12.00 &Y0.00; & pen\ up\\
+        G0 &X0 &Y0; & pen\ up\\
+        \end{array}$ \\ \hline
+
+
+
+    main & test normal case & SingleStrokeFont, test.txt: "Hello World", 4mm text height & \scriptsize$\begin{array}{cccl}
+    G0 &X0.00 Y&0.00  &Pen up\\
+    G1 &X0.00 Y&4.00  &Pen down\\
+    G0 &X2.67 Y&0.00  &Pen up\\
+    G1 &X2.67 Y&4.00  &Pen down\\
+    G0 &X0.00 Y&2.00  &Pen up\\
+    G1 &X2.67 Y&2.00  &Pen down\\
+    G0 &X4.00 Y&0.00  &Pen up\\
+    G0 &X4.00 Y&1.33  &Pen up\\
+    G1 &X6.67 Y&1.56  &Pen down\\
+    G1 &X6.00 Y&2.67  &Pen down\\
+    G1 &X4.67 Y&2.67  &Pen down\\
+    G1 &X4.00 Y&2.00  &Pen down\\
+    G1 &X4.00 Y&0.44  &Pen down\\
+    G1 &X4.67 Y&0.00  &Pen down\\
+    G1 &X6.00 Y&0.00  &Pen down\\
+    G1 &X6.67 Y&0.44  &Pen down\\
+    G0 &X8.00 Y&0.00  &Pen up\\
+    G0 &X8.67 Y&0.00  &Pen up\\
+    G1 &X10.00 &Y0.00; &Pen down\\
+    G0 &X9.33 Y&0.00  &Pen up\\
+    G1 &X9.33 Y&4.00  &Pen down\\
+    G1 &X8.67 Y&4.00  &Pen down\\
+    G0 &X12.00 &Y0.00; &Pen up\\
+    G0 &X12.67 &Y0.00; &Pen up\\
+    G1 &X14.00 &Y0.00; &Pen down\\
+    G0 &X13.33 &Y0.00; &Pen up\\
+    G1 &X13.33 &Y4.00; &Pen down\\
+    G1 &X12.67 &Y4.00; &Pen down\\
+    G0 &X16.00 &Y0.00; &Pen up\\
+    G0 &X17.33 &Y0.00; &Pen up\\
+    G1 &X16.00 &Y0.44; &Pen down\\
+    G1 &X16.00 &Y2.00; &Pen down\\
+    G1 &X17.33 &Y2.44; &Pen down\\
+    G1 &X18.67 &Y2.00; &Pen down\\
+    G1 &X18.67 &Y0.44; &Pen down\\
+    G1 &X17.33 &Y0.00; &Pen down\\
+    G0 &X20.00 &Y0.00; &Pen up\\
+    G0 &X24.00 &Y0.00; &Pen up\\
+    G0 &X24.00 &Y4.00; &Pen up\\
+    G1 &X24.67 &Y0.00; &Pen down\\
+    G1 &X25.33 &Y3.11; &Pen down\\
+    G1 &X26.00 &Y0.00; &Pen down\\
+    G1 &X26.67 &Y4.00; &Pen down\\
+    G0 &X28.00 &Y0.00; &Pen up\\
+    G0 &X29.33 &Y0.00; &Pen up\\
+    G1 &X28.00 &Y0.44; &Pen down\\
+    G1 &X28.00 &Y2.00; &Pen down\\
+    G1 &X29.33 &Y2.44; &Pen down\\
+    G1 &X30.67 &Y2.00; &Pen down\\
+    G1 &X30.67 &Y0.44; &Pen down\\
+    G1 &X29.33 &Y0.00; &Pen down\\
+    G0 &X32.00 &Y0.00; &Pen up\\
+    G0 &X32.00 &Y0.00; &Pen up\\
+    G1 &X32.00 &Y2.44; &Pen down\\
+    G0 &X32.00 &Y1.78; &Pen up\\
+    G1 &X33.33 &Y2.44; &Pen down\\
+    G1 &X34.67 &Y1.78; &Pen down\\
+    G0 &X36.00 &Y0.00; &Pen up\\
+    G0 &X36.67 &Y0.00; &Pen up\\
+    G1 &X38.00 &Y0.00; &Pen down\\
+    G0 &X37.33 &Y0.00; &Pen up\\
+    G1 &X37.33 &Y4.00; &Pen down\\
+    G1 &X36.67 &Y4.00; &Pen down\\
+    G0 &X40.00 &Y0.00; &Pen up\\
+    G0 &X42.67 &Y0.44; &Pen up\\
+    G1 &X41.33 &Y0.00; &Pen down\\
+    G1 &X40.00 &Y0.44; &Pen down\\
+    G1 &X40.00 &Y2.00; &Pen down\\
+    G1 &X41.33 &Y2.44; &Pen down\\
+    G1 &X42.67 &Y2.00; &Pen down\\
+    G0 &X42.67 &Y4.00; &Pen up\\
+    G1 &X42.67 &Y0.00; &Pen down\\
+    G0 &X44.00 &Y0.00; &Pen up\\
+    G0 &X44.00 &Y0.00; &Pen up\\
+    G0 &X0 &Y0 ;& to origin\\
+    \end{array}$\\ \hline
+    main & test normal case with carrage return & SingleStrokeFont, test.txt: "Hello $\backslash$n World", 10mm text height & \scriptsize$\begin{array}{cccl}
+        G0 &X0.00  &Y0.00;   &Pen up\\
+        G1 &X0.00  &Y10.00;  &Pen down\\
+        G0 &X6.67  &Y0.00;   &Pen up\\
+        G1 &X6.67  &Y10.00;  &Pen down\\
+        G0 &X0.00  &Y5.00;   &Pen up\\
+        G1 &X6.67  &Y5.00;   &Pen down\\
+        G0 &X10.00 &Y0.00;   &Pen up\\
+        G0 &X10.00 &Y3.33;   &Pen up\\
+        G1 &X16.67 &Y3.89;   &Pen down\\
+        G1 &X15.00 &Y6.67;   &Pen down\\
+        G1 &X11.67 &Y6.67;   &Pen down\\
+        G1 &X10.00 &Y5.00;   &Pen down\\
+        G1 &X10.00 &Y1.11;   &Pen down\\
+        G1 &X11.67 &Y0.00;   &Pen down\\
+        G1 &X15.00 &Y0.00;   &Pen down\\
+        G1 &X16.67 &Y1.11;   &Pen down\\
+        G0 &X20.00 &Y0.00;   &Pen up\\
+        G0 &X21.67 &Y0.00;   &Pen up\\
+        G1 &X25.00 &Y0.00;   &Pen down\\
+        G0 &X23.33 &Y0.00;   &Pen up\\
+        G1 &X23.33 &Y10.00;  &Pen down\\
+        G1 &X21.67 &Y10.00;  &Pen down\\
+        G0 &X30.00 &Y0.00;   &Pen up\\
+        G0 &X31.67 &Y0.00;   &Pen up\\
+        G1 &X35.00 &Y0.00;   &Pen down\\
+        G0 &X33.33 &Y0.00;   &Pen up\\
+        G1 &X33.33 &Y10.00;  &Pen down\\
+        G1 &X31.67 &Y10.00;  &Pen down\\
+        G0 &X40.00 &Y0.00;   &Pen up\\
+        G0 &X43.33 &Y0.00;   &Pen up\\
+        G1 &X40.00 &Y1.11;   &Pen down\\
+        G1 &X40.00 &Y5.00;   &Pen down\\
+        G1 &X43.33 &Y6.11;   &Pen down\\
+        G1 &X46.67 &Y5.00;   &Pen down\\
+        G1 &X46.67 &Y1.11;   &Pen down\\
+        G1 &X43.33 &Y0.00;   &Pen down\\
+        G0 &X50.00 &Y0.00;   &Pen up\\
+        G0 &X60.00 &Y0.00;   &Pen up\\
+        G0 &X60.00 &Y0.00;   &Pen up\\
+        G0 &X0.00  &Y-5.00;  &Pen up\\
+        G1 &X1.67  &Y-15.00; &Pen down\\
+        G1 &X3.33  &Y-7.22;  &Pen down\\
+        G1 &X5.00  &Y-15.00; &Pen down\\
+        G1 &X6.67  &Y-5.00;  &Pen down\\
+        G0 &X10.00 &Y-15.00; &Pen up\\
+        G0 &X13.33 &Y-15.00; &Pen up\\
+        G1 &X10.00 &Y-13.89; &Pen down\\
+        G1 &X10.00 &Y-10.00; &Pen down\\
+        G1 &X13.33 &Y-8.89;  &Pen down\\
+        G1 &X16.67 &Y-10.00; &Pen down\\
+        G1 &X16.67 &Y-13.89; &Pen down\\
+        G1 &X13.33 &Y-15.00; &Pen down\\
+        G0 &X20.00 &Y-15.00; &Pen up\\
+        G0 &X20.00 &Y-15.00; &Pen up\\
+        G1 &X20.00 &Y-8.89;  &Pen down\\
+        G0 &X20.00 &Y-10.56; &Pen up\\
+        G1 &X23.33 &Y-8.89;  &Pen down\\
+        G1 &X26.67 &Y-10.56; &Pen down\\
+        G0 &X30.00 &Y-15.00; &Pen up\\
+        G0 &X31.67 &Y-15.00; &Pen up\\
+        G1 &X35.00 &Y-15.00; &Pen down\\
+        G0 &X33.33 &Y-15.00; &Pen up\\
+        G1 &X33.33 &Y-5.00;  &Pen down\\
+        G1 &X31.67 &Y-5.00;  &Pen down\\
+        G0 &X40.00 &Y-15.00; &Pen up\\
+        G0 &X46.67 &Y-13.89; &Pen up\\
+        G1 &X43.33 &Y-15.00; &Pen down\\
+        G1 &X40.00 &Y-13.89; &Pen down\\
+        G1 &X40.00 &Y-10.00; &Pen down\\
+        G1 &X43.33 &Y-8.89;  &Pen down\\
+        G1 &X46.67 &Y-10.00; &Pen down\\
+        G0 &X46.67 &Y-5.00;  &Pen up\\
+        G1 &X46.67 &Y-15.00; &Pen down\\
+        G0 &X50.00 &Y-15.00; &Pen up\\
+        G0 &X50.00 &Y-15.00; &Pen up\\
+        G0 &X0 &Y0; & toorigin \\
+    \end{array}$\\ \hline
+        \end{longtable}
+
