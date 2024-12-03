@@ -9,7 +9,7 @@
 #include <unistd.h>
 #else
 #include <Windows.h>
-#define sleep(x) Sleep(x)
+// #define sleep(x) Sleep(x)ß
 #endif
 
 #include "../lib/rs232.h"

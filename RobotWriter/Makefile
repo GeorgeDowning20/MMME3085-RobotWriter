@@ -1,6 +1,6 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c11
+CFLAGS = -Wall -Wextra -Wpedantic -std=c11 -g
 
 # Directories
 SRC_DIR = src
@@ -8,11 +8,12 @@ LIB_DIR = lib
 BUILD_DIR = build
 
 # Source files and executable name
-SOURCES = $(SRC_DIR)/main.c $(LIB_DIR)/rs232.c $(LIB_DIR)/serial.c
+SOURCES = $(SRC_DIR)/*.c $(SRC_DIR)/font/*.c  $(SRC_DIR)/robot/*.c $(LIB_DIR)/rs232.c $(LIB_DIR)/serial.c
 EXECUTABLE = $(BUILD_DIR)/RobotWriter
 
 # Required runtime files to copy to build directory
-RUNTIME_FILES = gpl-3.0.txt SingleStrokeFont.txt test.txt
+RUNTIME_FILES = *.txt
+
 
 # Default target: build and create the executable
 all: $(BUILD_DIR) $(EXECUTABLE) copy_files
@@ -21,7 +22,7 @@ all: $(BUILD_DIR) $(EXECUTABLE) copy_files
 $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
 
-# Compile and link the executable
+# Compile and link the executable with AddressSanitizer
 $(EXECUTABLE): $(SOURCES)
 	$(CC) $(CFLAGS) $(SOURCES) -o $(EXECUTABLE)
 
