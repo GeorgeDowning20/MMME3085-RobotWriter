@@ -1,7 +1,7 @@
 #include "main.h"
 void SendCommands (char *buffer );
 
-int main()
+int main(void)
 {
     printf("hellow world\n");
     char buffer[100];
@@ -18,15 +18,16 @@ int main()
 
     // We do this by sending a new-line
     sprintf (buffer, "\n");
-    // printf ("Buffer to send: %s", buffer); // For diagnostic purposes only, normally comment out
+    printf ("Buffer to send: %s", buffer); // For diagnostic purposes only, normally comment out
     PrintBuffer (&buffer[0]);
 
-    sleep(0.1);
+    Sleep(100);
    
 
 
     // This is a special case - we wait  until we see a dollar ($)
     WaitForDollar();
+    Sleep(100);
 
     printf ("\nThe robot is now ready to draw\n");
 
@@ -70,8 +71,8 @@ int main()
 // as the dummy 'WaitForReply' has a getch() within the function.
 void SendCommands (char *buffer )
 {
-    // printf ("Buffer to send: %s", buffer); // For diagnostic purposes only, normally comment out
+    printf ("Buffer to send: %s", buffer); // For diagnostic purposes only, normally comment out
     PrintBuffer (&buffer[0]);
     WaitForReply();
-    sleep(0.1);
+    Sleep(100);
 }

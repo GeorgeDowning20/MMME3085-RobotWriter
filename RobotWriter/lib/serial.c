@@ -13,11 +13,17 @@
 
 #if defined(__linux__) || defined(__APPLE__)
 #include <stdlib.h>
+#include <unistd.h>
+
+unsigned int Sleep(unsigned int ms) {
+    return usleep(ms * 1000); // Convert milliseconds to microseconds
+}
+
 #endif
 
 #include "rs232.h"
 
-// #define Serial_Mode
+#define Serial_Mode
 
 #ifdef Serial_Mode   // Code for running with robot
 
@@ -25,7 +31,7 @@
 int CanRS232PortBeOpened ( void )
 {
     char mode[]= {'8','N','1',0};
-    if(RS232_OpenComport(cport_nr, bdrate, mode))
+    if(RS232_OpenComport(cport_nr, bdrate, mode,0))
     {
         printf("Can not open comport\n");
 
@@ -95,6 +101,8 @@ int WaitForReply (void)
     int i, n;
 
     unsigned char buf[4096];
+
+    printf ("Waiting for reply\n");
 
     while(1)
     {
