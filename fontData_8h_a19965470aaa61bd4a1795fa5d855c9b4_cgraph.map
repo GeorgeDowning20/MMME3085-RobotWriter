@@ -1,0 +1,13 @@
+<map id="fontDataConstructor" name="fontDataConstructor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,160,133"/>
+<area shape="rect" id="node2" href="$fontData_8c.html#ac0b2ffe66e9981ba5b31a1b3a5d4c1cb" title="Frees all memory allocated for font data, including the hash table and its contents." alt="" coords="375,5,429,32"/>
+<area shape="rect" id="node4" href="$fontData_8c.html#ae4a312d71725a88111461319b5991a10" title="Inserts a font character into the hash table." alt="" coords="211,56,277,83"/>
+<area shape="rect" id="node6" href="$fontData_8c.html#a2df7b9501d858fb603602d9f347ec32b" title="Looks up a font character in the hash table by ASCII key." alt="" coords="208,107,280,133"/>
+<area shape="rect" id="node7" href="$fontData_8c.html#a23b52ebfbb104ba67c1881c134d585f1" title="Parses the font file and populates a hash table with font characters." alt="" coords="211,157,277,184"/>
+<area shape="rect" id="node11" href="$fontData_8c.html#a92b9d480e46c478374025c262ebd7710" title="Scales the font data by a given factor." alt="" coords="552,335,615,361"/>
+<area shape="rect" id="node3" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title=" " alt="" coords="691,183,795,209"/>
+<area shape="rect" id="node5" href="$fontData_8c.html#a4fea98c9f13927078b0353ad14860438" title="Insert a font character into the hash table." alt="" coords="342,107,462,133"/>
+<area shape="rect" id="node8" href="$fontChar_8c.html#a456baedfa389ab308959d42234d26c99" title=" " alt="" coords="328,220,476,247"/>
+<area shape="rect" id="node9" href="$fontChar_8c.html#aa686165c9e06428bb42095cd9da1c646" title=" " alt="" coords="524,233,643,260"/>
+<area shape="rect" id="node10" href="$fontChar_8c.html#a52c7c85f6b59489920974e2a467d1574" title=" " alt="" coords="556,284,611,311"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="AddCoord2D" name="AddCoord2D">
+<area shape="rect" id="node1" title=" " alt="" coords="763,31,865,57"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#abae14e94f199f0a08c0d21080564e52e" title=" " alt="" coords="648,5,715,32"/>
+<area shape="rect" id="node7" href="$robot_8c.html#aad90fa0e55a1c01b398f24b6b5285e8d" title=" " alt="" coords="486,56,577,83"/>
+<area shape="rect" id="node3" href="$cursor_8c.html#ac9206024f47e097a8c24cd2cdfa7234f" title=" " alt="" coords="463,5,600,32"/>
+<area shape="rect" id="node4" href="$gcode_8c.html#ad752fe57ef57309b894a1e29b1be17f6" title="Generate G&#45;code for a given text string." alt="" coords="288,31,415,57"/>
+<area shape="rect" id="node5" href="$gcode_8c.html#a44ba85fdeef6e4fb50e27ec96de1f736" title="Process a text file word by word and generate G&#45;code." alt="" coords="108,31,240,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,31,60,57"/>
+</map>
