@@ -1,78 +1,98 @@
+/**
+ * @file main.c
+ * @brief Entry point for the robot text drawing application.
+ * @details
+ * This program initializes the robot, parses font data from a specified font file,
+ * and allows the user to specify a text height and input file containing the text to be drawn.
+ * It then processes the input text, converts it into G-code, and sends the commands to the robot
+ * to draw the text. Finally, it frees allocated resources and concludes the operation.
+ * @note View documentation at https://georgedowning20.github.io/MMME3085-RobotWriter/
+ */
+
 #include "main.h"
-void SendCommands (char *buffer );
+
+///////////////////////////////////////////////////////////////////////
+//                        PUBLIC   DEFINITIONS                       //
+///////////////////////////////////////////////////////////////////////
+
+/**
+ * @details
+ * This function flushes the standard input, requests a text height from the user,
+ * and validates that it falls within the permitted range. If valid, the height is
+ * converted into a scale factor based on the default character space.
+ */
+errorCode_t GetUserScale(double *scale)
+{
+    double height;                                       // Desired text height in millimeters
+    fflush(stdin);                                       // Flush standard input
+    printf("Enter the desired text height (4-10 mm): "); // Prompt user for text height
+
+    if (scanf("%lf", &height) != 1 || height < MINIMUM_TEXT_HEIGHT_MM || height > MAXIMUM_TEXT_HEIGHT_MM) // Check if input is valid
+        return ErrorHandler(ERROR_INVALID_SCALE_INPUT);                                                   // Handle error
+
+    *scale = height / CHARACTER_SPACE_MM; // Calculate scale factor
+    return SUCCESS;                       // Return success
+}
+
+/**
+ * @details
+ * This function flushes the standard input, requests a file name from the user, and
+ * tries to open the specified file in read mode. If successful, it returns a pointer
+ * to the opened file.
+ */
+errorCode_t GetUserFile(FILE **file)
+{
+    char filename[100];                  // Buffer to hold file name
+    fflush(stdin);                       // Flush standard input
+    printf("Enter file name to read: "); // Prompt user for file name
+    scanf("%s", filename);               // Read file name
+
+    *file = fopen(filename, "r");             // Open file
+    if (!*file)                               // Check if file cannot be opened
+        return ErrorHandler(ERROR_OPEN_FILE); // Handle error
+
+    return SUCCESS; // Return success
+}
+
+///////////////////////////////////////////////////////////////////////
+//                       MAIN PROGRAM ENTRY                          //
+///////////////////////////////////////////////////////////////////////
 
 int main(void)
 {
-    printf("hellow world\n");
-    char buffer[100];
- 
-    // If we cannot open the port then give up immediatly
-    if ( CanRS232PortBeOpened() == -1 )
-    {
-        printf ("\nUnable to open the COM port (specified in serial.h) ");
-        exit (0);
-    }
+    fontData_t *fontData = fontDataConstructor();
 
-    // Time to wake up the robot
-    printf ("\nAbout to wake up the robot\n");
+    // Start up the robot
+    if (StartUpRobot() != SUCCESS)
+        exit(EXIT_FAILURE);
 
-    // We do this by sending a new-line
-    sprintf (buffer, "\n");
-    printf ("Buffer to send: %s", buffer); // For diagnostic purposes only, normally comment out
-    PrintBuffer (&buffer[0]);
+    // Parse the font file
+    if (fontData->parse(fontData, FONT_FILE) != SUCCESS)
+        exit(EXIT_FAILURE);
 
-    Sleep(100);
-   
+    // Ask the user for the desired text height
+    double scale;
+    while (GetUserScale(&scale) != SUCCESS)
+        ;
 
+    // Scale the font data
+    if (fontData->scale(fontData, scale) != SUCCESS)
+        exit(EXIT_FAILURE);
 
-    // This is a special case - we wait  until we see a dollar ($)
-    WaitForDollar();
-    Sleep(100);
+    // Process the text file
+    FILE *file = NULL;
+    while (GetUserFile(&file) != SUCCESS)
+        ;
 
-    printf ("\nThe robot is now ready to draw\n");
+    // Process the text file
+    if (process_text_file(fontData, file) != SUCCESS)
+        exit(EXIT_FAILURE);
 
-    //These commands get the robot into 'ready to draw mode' and need to be sent before any writing commands
-    sprintf (buffer, "G1 X0 Y0 F1000\n");
-    SendCommands(buffer);
-    sprintf (buffer, "M3\n");
-    SendCommands(buffer);
-    sprintf (buffer, "S0\n");
-    SendCommands(buffer);
+    fclose(file);
 
-    // These are sample commands to draw out some information 
-    // This is the section that you will replace with your own code
-    sprintf (buffer, "G0 X2.5 Y-2.5\n");
-    SendCommands(buffer);
-    sprintf (buffer, "S1000\n");
-    SendCommands(buffer);
-    sprintf (buffer, "G1 X7.5 Y-2.5\n");
-    SendCommands(buffer);
-    sprintf (buffer, "G1 X7.5 Y-7.5\n");
-    SendCommands(buffer);
-    sprintf (buffer, "G1 X2.5 Y-7.5\n");
-    SendCommands(buffer);
-    sprintf (buffer, "G1 X2.5 Y-2.5\n");
-    SendCommands(buffer);
-    sprintf (buffer, "S0\n");
-    SendCommands(buffer);
-    sprintf (buffer, "G0 X0 Y0\n");
-    SendCommands(buffer);
-    // End of sample g-code
-    
+    // Free the font data
+    if (fontData->free(fontData) != SUCCESS)
+        exit(EXIT_FAILURE);
 
-    // Before we exit the program we need to close the COM port
-    CloseRS232Port();
-    printf("Com port now closed\n");
-
-    return (0);
-}
-
-// Send the data to the robot - note in 'PC' mode you need to hit space twice
-// as the dummy 'WaitForReply' has a getch() within the function.
-void SendCommands (char *buffer )
-{
-    printf ("Buffer to send: %s", buffer); // For diagnostic purposes only, normally comment out
-    PrintBuffer (&buffer[0]);
-    WaitForReply();
-    Sleep(100);
+    return 0;
 }
