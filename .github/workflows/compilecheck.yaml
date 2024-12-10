@@ -33,7 +33,7 @@ jobs:
         shell: msys2 {0}
         run: |
           cd RobotWriter  # Adjust if your project directory is different
-          make run
+          make
 
   build-and-run-macos:
     name: macOS Build and Run
@@ -51,7 +51,7 @@ jobs:
       - name: Build and Run the project on macOS
         run: |
           cd RobotWriter  # Adjust if your project directory is different
-          make run
+          make
 
   build-and-run-linux:
     name: Linux Build and Run
@@ -69,4 +69,4 @@ jobs:
       - name: Build and Run the project on Linux
         run: |
           cd RobotWriter  # Adjust if your project directory is different
-          make CFLAGS="-D_DEFAULT_SOURCE" run
+          make CFLAGS="-D_DEFAULT_SOURCE"
