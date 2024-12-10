@@ -3,7 +3,6 @@
 
 #include "serial.h"
 
-
 #include <unistd.h>
 
 #if defined(__WINDOWS__)
@@ -24,6 +23,7 @@ unsigned int Sleep(unsigned int ms) {
 #include "rs232.h"
 
 #define Serial_Mode
+// #define DEBUG_MODE 
 
 #ifdef Serial_Mode   // Code for running with robot
 
@@ -33,8 +33,9 @@ int CanRS232PortBeOpened ( void )
     char mode[]= {'8','N','1',0};
     if(RS232_OpenComport(cport_nr, bdrate, mode,0))
     {
+#ifdef DEBUG_MODE
         printf("Can not open comport\n");
-
+#endif
         return(-1);
     }
     return (0);      // Success
@@ -50,12 +51,11 @@ void CloseRS232Port (void)
 int PrintBuffer (char *buffer)
 {
     RS232_cputs(cport_nr, buffer);
+#ifdef DEBUG_MODE
     printf("sent: %s\n", buffer);
-
+#endif
     return (0);
-
 }
-
 
 int WaitForDollar (void)
 {
@@ -65,25 +65,33 @@ int WaitForDollar (void)
 
     while(1)
     {
+#ifdef DEBUG_MODE
         printf (".");
+#endif
         n = RS232_PollComport(cport_nr, buf, 4095);
 
         if(n > 0)
         {
+#ifdef DEBUG_MODE
             printf ("RCVD: N = %d ", n);
+#endif
             buf[n] = 0;   /* always put a "null" at the end of a string! */
 
             for(i=0; i < n; i++)
             {
                 if(buf[i] == '$')  /* replace unreadable control-codes by dots */
                 {
+#ifdef DEBUG_MODE
                     printf("received %i bytes: %s \n", n, (char *)buf);
-                    printf("\nSaw the Dollar");
+                    printf("\nSaw the Dollar\n");
+#endif
                     return 0;
                 }
             }
 
+#ifdef DEBUG_MODE
             printf("received %i bytes: %s \n", n, (char *)buf);
+#endif
 
             if ( (buf[0] == 'o') && (buf[1] == 'k') )
                 return 0;
@@ -93,7 +101,6 @@ int WaitForDollar (void)
     }
 
     return(0);
-
 }
 
 int WaitForReply (void)
@@ -102,16 +109,22 @@ int WaitForReply (void)
 
     unsigned char buf[4096];
 
+#ifdef DEBUG_MODE
     printf ("Waiting for reply\n");
+#endif
 
     while(1)
     {
+#ifdef DEBUG_MODE
         printf (".");
+#endif
         n = RS232_PollComport(cport_nr, buf, 4095);
 
         if(n > 0)
         {
+#ifdef DEBUG_MODE
             printf ("RCVD: N = %d ", n);
+#endif
             buf[n] = 0;   /* always put a "null" at the end of a string! */
 
             for(i=0; i < n; i++)
@@ -122,7 +135,9 @@ int WaitForReply (void)
                 }
             }
 
+#ifdef DEBUG_MODE
             printf("received %i bytes: %s\n", n, (char *)buf);
+#endif
 
             if ( (buf[0] == 'o') && (buf[1] == 'k') )
                 return 0;
@@ -132,7 +147,6 @@ int WaitForReply (void)
     }
 
     return(0);
-
 }
 
 #else  // Code for testing with emulator
@@ -152,7 +166,9 @@ void CloseRS232Port (void)
 // Print the buffer contents to the terminal
 int PrintBuffer (char *buffer)
 {
+#ifdef DEBUG_MODE
     printf("%s \n",buffer);
+#endif
     return (0);
 }
 
@@ -170,8 +186,4 @@ int WaitForDollar (void)
     return (0);
 }
 
-#endif 
-
-
-
-
+#endif
