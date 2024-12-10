@@ -1,0 +1,6 @@
+<map id="fontCharConstuctor" name="fontCharConstuctor">
+<area shape="rect" id="node1" title="Constructs and initializes a new fontCharacter_t object." alt="" coords="5,56,153,83"/>
+<area shape="rect" id="node2" href="$fontChar_8c.html#aa686165c9e06428bb42095cd9da1c646" title="Appends a single stroke to a fontCharacter_t object." alt="" coords="201,5,320,32"/>
+<area shape="rect" id="node3" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="368,56,472,83"/>
+<area shape="rect" id="node4" href="$fontChar_8c.html#a52c7c85f6b59489920974e2a467d1574" title="Frees the memory allocated for a fontCharacter_t object." alt="" coords="233,107,288,133"/>
+</map>

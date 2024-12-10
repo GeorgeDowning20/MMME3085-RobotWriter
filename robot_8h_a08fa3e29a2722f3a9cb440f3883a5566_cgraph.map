@@ -1,0 +1,14 @@
+<map id="StartUpRobot" name="StartUpRobot">
+<area shape="rect" id="node1" title="Initializes and starts up the robot." alt="" coords="5,132,115,159"/>
+<area shape="rect" id="node2" href="$serial_8c.html#a0829987208dfc68af3bcd380c0a78bd8" title=" " alt="" coords="163,5,344,32"/>
+<area shape="rect" id="node4" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="201,56,305,83"/>
+<area shape="rect" id="node5" href="$robot_8c.html#a027fcf39d775ebede070e699b2b43828" title="Moves the robot to its home position." alt="" coords="204,208,303,235"/>
+<area shape="rect" id="node6" href="$robot_8c.html#a7491b87f64cad2b3f2e418e256ab78f0" title="Sends a command buffer to the robot and waits for a reply." alt="" coords="408,183,536,209"/>
+<area shape="rect" id="node7" href="$serial_8c.html#a81685016bdf8b33327c0effc3946c23f" title=" " alt="" coords="609,132,699,159"/>
+<area shape="rect" id="node12" href="$serial_8c.html#a426a0a125a3cbb0989b6f6bed4e229b1" title=" " alt="" coords="417,256,527,283"/>
+<area shape="rect" id="node3" href="$rs232_8c.html#a8387633166c515d774ad158ba266d06a" title=" " alt="" coords="392,5,552,32"/>
+<area shape="rect" id="node10" href="$serial_8c.html#a41ebffe26e5aa854de06af059212be92" title=" " alt="" coords="600,195,708,221"/>
+<area shape="rect" id="node8" href="$rs232_8c.html#a179396991e5d9e3ef1be67e6f03038a6" title=" " alt="" coords="779,132,884,159"/>
+<area shape="rect" id="node9" href="$rs232_8c.html#ad8d4dbe7691e53e178360403228d650b" title=" " alt="" coords="955,132,1087,159"/>
+<area shape="rect" id="node11" href="$rs232_8c.html#af66e3a0fc5eb7defb43aa61487a0b895" title=" " alt="" coords="756,208,907,235"/>
+</map>

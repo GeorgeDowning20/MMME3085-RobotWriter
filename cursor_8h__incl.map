@@ -1,0 +1,7 @@
+<map id="RobotWriter/src/robot/cursor.h" name="RobotWriter/src/robot/cursor.h">
+<area shape="rect" id="node1" title="Declaration of the cursor_t structure and associated functions." alt="" coords="90,5,251,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,88,121"/>
+<area shape="rect" id="node3" href="$coord_8h.html" title="Defines the Coord2D_t structure for representing 2D coordinates and provides inline functions for bas..." alt="" coords="112,95,229,121"/>
+<area shape="rect" id="node4" href="$error_8h.html" title="Defines error codes and a function to handle and log these errors." alt="" coords="254,95,365,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="276,169,343,196"/>
+</map>

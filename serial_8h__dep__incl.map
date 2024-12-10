@@ -1,0 +1,11 @@
+<map id="RobotWriter/lib/serial.h" name="RobotWriter/lib/serial.h">
+<area shape="rect" id="node1" title=" " alt="" coords="127,5,299,32"/>
+<area shape="rect" id="node2" href="$serial_8c.html" title=" " alt="" coords="5,87,176,114"/>
+<area shape="rect" id="node3" href="$main_8h.html" title="Main configuration header for setting up the robot and font data environment." alt="" coords="178,266,350,293"/>
+<area shape="rect" id="node5" href="$robot_8h.html" title="Declarations for robot control functions and related constants." alt="" coords="302,80,463,121"/>
+<area shape="rect" id="node4" href="$main_8c.html" title="Entry point for the robot text drawing application." alt="" coords="179,348,349,375"/>
+<area shape="rect" id="node6" href="$cursor_8c.html" title="Implementation of the cursor_t structure and related operations." alt="" coords="302,169,463,211"/>
+<area shape="rect" id="node7" href="$gcode_8h.html" title="Declarations for text processing functions that utilize font data and robot movement." alt="" coords="487,169,649,211"/>
+<area shape="rect" id="node9" href="$robot_8c.html" title="Implementation of robot control functions for positioning and movement." alt="" coords="673,169,834,211"/>
+<area shape="rect" id="node8" href="$gcode_8c.html" title="Implementation of text processing functions that generate G&#45;code from text using font data." alt="" coords="487,259,649,300"/>
+</map>

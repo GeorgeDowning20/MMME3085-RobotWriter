@@ -1,0 +1,6 @@
+<map id="HomeRobot" name="HomeRobot">
+<area shape="rect" id="node1" title="Moves the robot to its home position." alt="" coords="288,31,387,57"/>
+<area shape="rect" id="node2" href="$gcode_8c.html#a44ba85fdeef6e4fb50e27ec96de1f736" title="Processes a text file using the provided font data." alt="" coords="108,5,240,32"/>
+<area shape="rect" id="node4" href="$robot_8c.html#a08fa3e29a2722f3a9cb440f3883a5566" title="Initializes and starts up the robot." alt="" coords="119,56,229,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,31,60,57"/>
+</map>

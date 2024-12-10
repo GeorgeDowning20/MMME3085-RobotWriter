@@ -1,0 +1,10 @@
+<map id="RobotWriter/src/font/fontChar.h" name="RobotWriter/src/font/fontChar.h">
+<area shape="rect" id="node1" title="Declarations and definitions related to the fontCharacter_t structure and its operations." alt="" coords="255,5,409,47"/>
+<area shape="rect" id="node2" href="$cursor_8h.html" title="Declaration of the cursor_t structure and associated functions." alt="" coords="127,95,249,121"/>
+<area shape="rect" id="node4" href="$coord_8h.html" title="Defines the Coord2D_t structure for representing 2D coordinates and provides inline functions for bas..." alt="" coords="248,169,365,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="334,95,405,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="429,95,499,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,88,196"/>
+<area shape="rect" id="node5" href="$error_8h.html" title="Defines error codes and a function to handle and log these errors." alt="" coords="113,169,223,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="135,244,201,271"/>
+</map>

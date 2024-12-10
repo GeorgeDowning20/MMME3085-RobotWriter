@@ -1,0 +1,5 @@
+<map id="_insert" name="_insert">
+<area shape="rect" id="node1" title="Inserts a font character into the hash table." alt="" coords="5,31,72,57"/>
+<area shape="rect" id="node2" href="$fontData_8c.html#a4fea98c9f13927078b0353ad14860438" title="Hash function for converting a character key into an index." alt="" coords="120,5,240,32"/>
+<area shape="rect" id="node3" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="128,56,232,83"/>
+</map>

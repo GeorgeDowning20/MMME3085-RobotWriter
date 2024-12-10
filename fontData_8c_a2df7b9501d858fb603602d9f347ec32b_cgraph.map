@@ -1,0 +1,4 @@
+<map id="_lookup" name="_lookup">
+<area shape="rect" id="node1" title="Looks up a font character in the hash table by ASCII key." alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node2" href="$fontData_8c.html#a4fea98c9f13927078b0353ad14860438" title="Hash function for converting a character key into an index." alt="" coords="125,5,245,32"/>
+</map>

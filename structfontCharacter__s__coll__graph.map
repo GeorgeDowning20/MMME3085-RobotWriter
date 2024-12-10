@@ -1,0 +1,5 @@
+<map id="fontCharacter_s" name="fontCharacter_s">
+<area shape="rect" id="node1" title="Structure representing a font character." alt="" coords="5,184,131,211"/>
+<area shape="rect" id="node2" href="$structstroke__s.html" title="Structure representing a single stroke of a character." alt="" coords="30,95,106,121"/>
+<area shape="rect" id="node3" href="$structCoord2D__s.html" title="Represents a point in 2D space." alt="" coords="22,5,114,32"/>
+</map>
