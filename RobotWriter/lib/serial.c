@@ -22,8 +22,6 @@ unsigned int Sleep(unsigned int ms) {
 
 #include "rs232.h"
 
-#define Serial_Mode
-// #define DEBUG_MODE 
 
 #ifdef Serial_Mode   // Code for running with robot
 

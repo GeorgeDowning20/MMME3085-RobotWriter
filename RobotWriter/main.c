@@ -61,10 +61,12 @@ errorCode_t GetUserFile(FILE **file)
 int main(void)
 {
     fontData_t *fontData = fontDataConstructor();
-
+    
+#ifdef Serial_Mode
     // Start up the robot
     if (StartUpRobot() != SUCCESS)
         exit(EXIT_FAILURE);
+#endif
 
     // Parse the font file
     if (fontData->parse(fontData, FONT_FILE) != SUCCESS)
