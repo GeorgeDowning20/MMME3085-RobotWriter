@@ -58,7 +58,7 @@ static const fontCharacter_t *_lookup(const fontData_t *const self, const char a
  * @param[in]     scale    The factor by which to scale the font strokes.
  * @return SUCCESS on success, or ERROR_NULL_POINTER if `fontData` is NULL.
  */
-static errorCode_t _scale(fontData_t *const fontData, double scale);
+static errorCode_t _scale(fontData_t *const self, double scale);
 
 /**
  * @brief Hash function for converting a character key into an index.
@@ -76,7 +76,7 @@ static inline unsigned int _hash_function(char key);
  *         - ERROR_OPEN_FILE if the file cannot be opened.
  *         - ERROR_MEMORY_ALLOCATION_FAILED if memory allocation for font characters fails.
  */
-static errorCode_t _parse(fontData_t *const fontData, const char *const filename);
+static errorCode_t _parse(fontData_t *const self, const char *const filename);
 
 /**
  * @brief Frees all memory allocated for the font data, including the hash table and its contents.
@@ -174,16 +174,16 @@ static const fontCharacter_t *_lookup(const fontData_t *const self, const char a
  * Iterates through each font character in the hash table and multiplies the x and y
  * components of each stroke by the given scale factor.
  */
-static errorCode_t _scale(fontData_t *const fontData, double scale)
+static errorCode_t _scale(fontData_t *const self, double scale)
 {
-    if (!fontData)                               // Check if fontData is NULL
+    if (!self)                               // Check if fontData is NULL
         return ErrorHandler(ERROR_NULL_POINTER); // Handle error
 
-    fontData->fontScale = scale; // Set font scale to given scale
+    self->fontScale = scale; // Set font scale to given scale
 
     for (int i = 0; i < ASCII_CHARACTERS; i++) // Iterate through hash table
     {
-        hashNode_t *node = fontData->table[i]; // Get node at index
+        hashNode_t *node = self->table[i]; // Get node at index
         while (node != NULL)                   // Iterate through chain
         {
             fontCharacter_t *fontChar = node->character;       // Get font character
@@ -213,9 +213,9 @@ static inline unsigned int _hash_function(char key)
  * Opens the specified file, reads font character definitions, constructs
  * fontCharacter_t objects, and inserts them into the hash table.
  */
-static errorCode_t _parse(fontData_t *const fontData, const char *const filename)
+static errorCode_t _parse(fontData_t *const self, const char *const filename)
 {
-    if (!fontData)                               // Check if fontData is NULL
+    if (!self)                               // Check if fontData is NULL
         return ErrorHandler(ERROR_NULL_POINTER); // Handle error
 
     if (!filename)                               // Check if filename is NULL
@@ -248,7 +248,7 @@ static errorCode_t _parse(fontData_t *const fontData, const char *const filename
             if (sscanf(line, "%lf %lf %i", &stroke.vec.x, &stroke.vec.y, (int *)&stroke.pen_state) == 3) // Parse stroke
                 fontChar->appendStroke(fontChar, stroke);                                                // Append stroke to font character
         }
-        fontData->insert(fontData, fontChar); // Insert font character into hash table
+        self->insert(self, fontChar); // Insert font character into hash table
     }
 
     fclose(file);   // Close file

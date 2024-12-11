@@ -184,11 +184,7 @@ static errorCode_t _move(cursor_t *const self, const Coord2D_t delta)
 static errorCode_t _newline(cursor_t *const self)
 {
     const Coord2D_t pos = {self->minPosition.x, self->posisiton.y - self->lineSpace}; // Set new position
-    self->set(self, pos);                                                             // Set cursor to new position
-
-    if (!_iswithinBounds(self))                    // Check if cursor is out of bounds
-        return ErrorHandler(CURSOR_OUT_OF_BOUNDS); // Handle error
-    return SUCCESS;                                // Return success
+    return self->set(self, pos);                                                      // Return error
 }
 
 /**
@@ -199,11 +195,7 @@ static errorCode_t _newline(cursor_t *const self)
 static errorCode_t _carriagereturn(cursor_t *const self)
 {
     const Coord2D_t pos = {self->minPosition.x, self->posisiton.y}; // Set new position
-    self->set(self, pos);                                           // Set cursor to new position
-
-    if (!_iswithinBounds(self))                    // Check if cursor is out of bounds
-        return ErrorHandler(CURSOR_OUT_OF_BOUNDS); // Handle error
-    return SUCCESS;                                // Return success
+    return self->set(self, pos);                                    // Return error
 }
 
 /**
@@ -214,13 +206,5 @@ static errorCode_t _carriagereturn(cursor_t *const self)
 static errorCode_t _update(cursor_t *const self)
 {
     const Coord2D_t delta = {self->characterSpace, 0.0}; // Set delta to character space
-    self->move(self, delta);                             // Move cursor by delta
-
-    if (!_iswithinBounds(self)) // Check if cursor is out of bounds
-        self->newline(self);    // attempt to Move to new line
-
-    if (!_iswithinBounds(self))                    // Check if cursor is out of bounds
-        return ErrorHandler(CURSOR_OUT_OF_BOUNDS); // Handle error
-
-    return SUCCESS; // Return success
+    return self->move(self, delta);                      // Move cursor by delta
 }
