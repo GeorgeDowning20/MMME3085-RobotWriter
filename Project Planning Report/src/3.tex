@@ -1,61 +1,934 @@
 
+\subsection{main.*}
+
+% /**
+%  * @brief Prompts the user to enter a desired text height and converts it into a scale factor.
+% * @details
+% * This function flushes the standard input, requests a text height from the user,
+% * and validates that it falls within the permitted range. If valid, the height is
+% * converted into a scale factor based on the default character space.
+% */
+%  * @param[out] scale Pointer to a double where the computed scale factor will be stored.
+%  * @return SUCCESS if a valid scale is obtained, or ERROR_INVALID_SCALE_INPUT if the input is invalid.
+%  */
+% errorCode_t GetUserScale(double *scale);
+
+% /**
+%  * @brief Prompts the user for a file name and attempts to open it for reading.
+% * @details
+% * This function flushes the standard input, requests a file name from the user, and
+% * tries to open the specified file in read mode. If successful, it returns a pointer
+% * to the opened file.
+%  * @param[out] file Pointer to a FILE* where the opened file pointer will be stored.
+%  * @return SUCCESS on successfully opening the file, or ERROR_OPEN_FILE if the file cannot be opened.
+%  */
+% errorCode_t GetUserFile(FILE **file);
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+errorCode_t GetUserScale(double *scale);
+\end{minted}
+\textbf{Breif:} Prompts the user to enter a desired text height and converts it into a scale factor. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function flushes the standard input, requests a text height from the user, and validates that it falls within the permitted range. If valid, the height is converted into a scale factor based on the default character space. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{scale} -- Pointer to a double where the computed scale factor will be stored. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS if a valid scale is obtained, or ERROR\_INVALID\_SCALE\_INPUT if the input is invalid. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+errorCode_t GetUserFile(FILE **file);
+\end{minted}
+\textbf{Breif:} Prompts the user for a file name and attempts to open it for reading. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function flushes the standard input, requests a file name from the user, and tries to open the specified file in read mode. If successful, it returns a pointer to the opened file. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{file} -- Pointer to a FILE* where the opened file pointer will be stored. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on successfully opening the file, or ERROR\_OPEN\_FILE if the file cannot be opened. \\[1em]
+
+
+\subsection{robot.*}
+
+% /**
+%  * @brief Initializes and starts up the robot.
+%  * @details
+%  * Initializes the robot by attempting to open the RS232 port and then
+%  * sending a sequence of commands to prepare the robot. It sets the robot
+%  * to a known position, starts the spindle or pen movement, sets initial
+%  * speed parameters, and finally moves the robot to the home position.
+%  * If the COM port cannot be opened, it reports an error. 
+%  * @return SUCCESS on successful startup, or an appropriate error code if startup fails.
+%  */
+% errorCode_t StartUpRobot(void);
+
+% /**
+%  * @brief Sends a stroke command to the robot based on the current cursor position.
+%  * @details
+%  * Sends a stroke command to the robot based on the provided cursor position and stroke data.
+%  * The stroke includes a vector (defining the movement direction and distance) and a pen state
+%  * (up or down). Depending on the pen state, the command uses either a rapid move (G0) with no
+%  * drawing or a linear move (G1) with drawing. After forming the command, the function sends it
+%  * to the robot and prints the command for debugging.
+%  * @param[in] cursor Pointer to the cursor_t structure representing the robot's current position.
+%  * @param[in] stroke The stroke_t structure containing the vector and pen state to apply.
+%  * @return SUCCESS on success, or an appropriate error code if sending the stroke fails.
+%  */
+% errorCode_t SendStoke(const cursor_t *const cursor, const stroke_t stroke);
+
+% /**
+%  * @brief Moves the robot to its home position.
+%  * @details
+%  * Moves the robot to a defined home position by sending the appropriate G-code
+%  * command. After constructing the G-code command with the home coordinates, it
+%  * sends the command to the robot and prints the command for debugging purposes.
+%  * @return SUCCESS on success, or an appropriate error code if moving to home fails.
+%  */
+% errorCode_t HomeRobot(void);
+    
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+errorCode_t StartUpRobot(void);
+\end{minted}
+\textbf{Breif:} Initializes and starts up the robot. \\
+\textbf{Details:} \\
+\hspace*{1cm}Initializes the robot by attempting to open the RS232 port and then sending a sequence of commands to prepare the robot. It sets the robot to a known position, starts the spindle or pen movement, sets initial speed parameters, and finally moves the robot to the home position. If the COM port cannot be opened, it reports an error. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on successful startup, or an appropriate error code if startup fails. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+errorCode_t SendStoke(const cursor_t *const cursor, const stroke_t stroke);
+\end{minted}
+\textbf{Breif:} Sends a stroke command to the robot based on the current cursor position. \\
+\textbf{Details:} \\
+\hspace*{1cm}Sends a stroke command to the robot based on the provided cursor position and stroke data. The stroke includes a vector (defining the movement direction and distance) and a pen state (up or down). Depending on the pen state, the command uses either a rapid move (G0) with no drawing or a linear move (G1) with drawing. After forming the command, the function sends it to the robot and prints the command for debugging. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{cursor} -- Pointer to the cursor\_t structure representing the robot's current position. \\
+\hspace*{1cm}\texttt{stroke} -- The stroke\_t structure containing the vector and pen state to apply. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or an appropriate error code if sending the stroke fails. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+errorCode_t HomeRobot(void);
+\end{minted}
+\textbf{Breif:} Moves the robot to its home position. \\
+\textbf{Details:} \\
+\hspace*{1cm}Moves the robot to a defined home position by sending the appropriate G-code command. After constructing the G-code command with the home coordinates, it sends the command to the robot and prints the command for debugging purposes. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or an appropriate error code if moving to home fails. \\[1em]
+
+
+% /**
+%  * @brief Processes a text file using the provided font data.
+%  * @details
+%  * This function reads the text file character by character and accumulates characters into a buffer.
+%  * Once it encounters a space, newline, or carriage return, it treats the accumulated characters as
+%  * a complete "word" and calls `generate_gcode()` to generate G-code for that word.
+%  *
+%  * If the file ends and there are still accumulated characters, it processes those as the final word.
+%  * After processing the file, it closes the file and sends the robot to its home position.
+%  * @param[in] fontData Pointer to the fontData_t structure containing font information.
+%  * @param[in,out] file Pointer to the file from which text will be read and processed.
+%  * @return SUCCESS on successful processing, or an appropriate error code if processing fails.
+%  */
+% errorCode_t process_text_file(const fontData_t *const fontData, FILE *const file);
+
+% /**
+%  * @brief Generates G-code commands based on the provided text using the given font data.
+%  * This function uses a static cursor to track the current drawing position. If the cursor
+%  * isn't initialized, it constructs a new cursor using the font data's scale factor. Before
+%  * processing the text, it checks if the word would overflow the current cursor line. If so,
+%  * it moves to a new line.
+%  *
+%  * It then iterates through the text:
+%  * - Spaces cause a cursor update.
+%  * - Newline ('\n') and carriage return ('\r') characters cause the cursor to adjust its position
+%  *   accordingly.
+%  * - Other characters are looked up in the font data. If found, their strokes are sent to the
+%  *   robot using `SendStoke()`. After drawing each character, the cursor is updated.
+%  * @param[in] fontData Pointer to the fontData_t structure containing font information.
+%  * @param[in] text     Pointer to the text string for which G-code will be generated.
+%  * @return SUCCESS on successful G-code generation, or an appropriate error code if generation fails.
+%  */
+% errorCode_t generate_gcode(const fontData_t *const fontData, const char *text);
+
+\subsection{gcode.*}
+
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+errorCode_t process_text_file(const fontData_t *const fontData, FILE *const file);
+\end{minted}
+\textbf{Breif:} Processes a text file using the provided font data. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function reads the text file character by character and accumulates characters into a buffer. Once it encounters a space, newline, or carriage return, it treats the accumulated characters as a complete "word" and calls `generate\_gcode()` to generate G-code for that word. \\
+\hspace*{1cm}If the file ends and there are still accumulated characters, it processes those as the final word. After processing the file, it closes the file and sends the robot to its home position. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{fontData} -- Pointer to the fontData\_t structure containing font information. \\
+\hspace*{1cm}\texttt{file} -- Pointer to the file from which text will be read and processed. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on successful processing, or an appropriate error code if processing fails. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+errorCode_t generate_gcode(const fontData_t *const fontData, const char *text);
+\end{minted}
+\textbf{Breif:} Generates G-code commands based on the provided text using the given font data. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function uses a static cursor to track the current drawing position. If the cursor isn't initialized, it constructs a new cursor using the font data's scale factor. Before processing the text, it checks if the word would overflow the current cursor line. If so, it moves to a new line. \\
+\hspace*{1cm}It then iterates through the text: \\
+\hspace*{1cm}- Spaces cause a cursor update. \\
+\hspace*{1cm}- Newline ('\textbackslash n') and carriage return ('\textbackslash r') characters cause the cursor to adjust its position accordingly. \\
+\hspace*{1cm}- Other characters are looked up in the font data. If found, their strokes are sent to the robot using `SendStoke()`. After drawing each character, the cursor is updated. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{fontData} -- Pointer to the fontData\_t structure containing font information. \\
+\hspace*{1cm}\texttt{text} -- Pointer to the text string for which G-code will be generated. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on successful G-code generation, or an appropriate error code if generation fails. \\[1em]
+
+
+\subsection{cursor.*}
+
+% /**
+%  * @brief Checks if the given word would overflow the current cursor boundaries.
+%  * @details
+%  * This function checks the length of the given word, calculates how much horizontal
+%  * space it would require (based on character spacing and cursor scale), and determines
+%  * if adding this word would exceed the maximum allowed X position.
+%  * @param[in] self Pointer to the cursor structure.
+%  * @param[in] word The word to test for overflow.
+%  * @return true if writing the word would cause overflow, false otherwise.
+%  */
+% static inline bool _testWordOverflow(const cursor_t *const self, const char *const word);
+
+% /**
+%  * @brief Checks if the current cursor position is within defined boundaries.
+%  * @details
+%  * Compares the current cursor position against the min and max boundaries.
+%  * If any coordinate is outside the defined limits, the cursor is considered out of bounds.
+%  * @param[in] self Pointer to the cursor structure.
+%  * @return true if the cursor is within bounds, false otherwise.
+%  */
+% static inline bool _iswithinBounds(const cursor_t *const self);
+
+% /**
+%  * @brief Sets the cursor to a specified position.
+%  * Assigns the given position to the cursor and then validates that the
+%  * cursor remains within boundaries. If not, an error is returned.
+%  * @param[in,out] self Pointer to the cursor structure.
+%  * @param[in] position The new position to set the cursor to.
+%  * @return SUCCESS on success, or CURSOR_OUT_OF_BOUNDS if the position is invalid.
+%  */
+% static errorCode_t _set(cursor_t *const self, const Coord2D_t position);
+
+% /**
+%  * @brief Moves the cursor by a specified delta.
+%  * Updates the cursor position by adding the given delta. If this position is out of
+%  * bounds, the function attempts to switch to a new line. If the position is still
+%  * invalid, it returns an error.
+%  * @param[in,out] self Pointer to the cursor structure.
+%  * @param[in] delta The delta by which to move the cursor.
+%  * @return SUCCESS on success, or CURSOR_OUT_OF_BOUNDS if the new position is invalid.
+%  */
+% static errorCode_t _move(cursor_t *const self, const Coord2D_t delta);
+
+% /**
+%  * @brief Moves the cursor to a new line.
+%  * @details
+%  * Moves the cursor down one line. This involves setting the x-position to the minimum
+%  * x-bound and decreasing the y-position by the line spacing. If the new position is invalid,
+%  * it returns an error.
+%  * @param[in,out] self Pointer to the cursor structure.
+%  * @return SUCCESS on success, or CURSOR_OUT_OF_BOUNDS if the new position is invalid.
+%  */
+% static errorCode_t _newline(cursor_t *const self);
+
+% /**
+%  * @brief Updates the cursor position after advancing by one character.
+%  * @details
+%  * Moves the cursor one character space to the right. If this results in an out-of-bounds
+%  * position, it attempts to move the cursor to a new line. If still out of bounds, it returns an error.
+%  * @param[in,out] self Pointer to the cursor structure.
+%  * @return SUCCESS on success, or CURSOR_OUT_OF_BOUNDS if the new position is invalid.
+%  */
+% static errorCode_t _update(cursor_t *const self);
+
+% /**
+%  * @brief Moves the cursor to the start of the current line (carriage return).
+%  * @details
+%  * Resets the x-position of the cursor to the minimum x-bound, emulating a carriage return.
+%  * If the updated position is out of bounds, it returns an error.
+%  * @param[in,out] self Pointer to the cursor structure.
+%  * @return SUCCESS on success, or CURSOR_OUT_OF_BOUNDS if the new position is invalid.
+%  */
+% static errorCode_t _carriagereturn(cursor_t *const self);
+
+% /**
+%  * @brief Constructs and initializes a new cursor_t object.
+%  * @details
+%  * This function initializes the cursor with a given scale factor, setting the initial position,
+%  * home position, minimum and maximum boundaries, as well as line and character spacing.
+%  * It also assigns function pointers to handle various cursor operations.
+%  * @param[in] scale The scaling factor to apply to the cursor's movements.
+%  * @return A cursor_t structure initialized with the given scale and default positions.
+%  */
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+cursor_t cursorConstructor(double scale);
+\end{minted}
+\textbf{Breif:} Constructs and initializes a new cursor\_t object. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function initializes the cursor with a given scale factor, setting the initial position, home position, minimum and maximum boundaries, as well as line and character spacing. It also assigns function pointers to handle various cursor operations. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{scale} -- The scaling factor to apply to the cursor's movements. \\
+\textbf{Returns:} \\
+\hspace*{1cm}A cursor\_t structure initialized with the given scale and default positions. \\[1em]
     
 
-    \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-int hash_table_insert(fontData_t *hash_table, const char ascii_key, fontCharacter_t *character);
-        \end{minted}
-        \textbf{Breif:} Inserts a font character into the hash table. \\
-        \textbf{Parameters:} \\
-        \hspace*{1cm}\texttt{hash\_table} -- Pointer to the hash table. \\
-        \hspace*{1cm}\texttt{ascii\_key} -- ASCII key for the font character. \\
-        \hspace*{1cm}\texttt{character} -- Pointer to the font character to insert. \\
-        \textbf{Returns:} \\
-        \hspace*{1cm}0 on success, -1 on failure. \\[1em]
-        
-        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-const fontCharacter_t *hash_table_lookup(const fontData_t *hash_table, const char ascii_key);
-        \end{minted}
-        \textbf{Breif:} Looks up a font character in the hash table by ASCII key. \\
-        \textbf{Parameters:} \\
-        \hspace*{1cm}\texttt{hash\_table} -- Pointer to the hash table. \\
-        \hspace*{1cm}\texttt{ascii\_key} -- ASCII key of the font character to retrieve. \\
-        \textbf{Returns:} \\
-        \hspace*{1cm}Pointer to the corresponding fontCharacter\_t, or \texttt{NULL} if not found. \\[1em]
-        
-        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-void parse_font_file(FontData *font_data, const char *filename);
-        \end{minted}
-        \textbf{Breif:} Parses the font file and populates a hash table with font characters. \\
-        \textbf{Parameters:} \\
-        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to populate. \\
-        \hspace*{1cm}\texttt{filename} -- Name of the font file to parse. \\
-        
-        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-void scale_font_data(FontData *font_data);
-        \end{minted}
-        \textbf{Breif:} Scales the font data by a given factor. \\
-        \textbf{Parameters:} \\
-        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to scale. \\
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline bool _testWordOverflow(const cursor_t *const self, const char *const word);
+\end{minted}
+\textbf{Breif:} Checks if the given word would overflow the current cursor boundaries. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function checks the length of the given word, calculates how much horizontal space it would require (based on character spacing and cursor scale), and determines if adding this word would exceed the maximum allowed X position. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the cursor structure. \\
+\hspace*{1cm}\texttt{word} -- The word to test for overflow. \\
+\textbf{Returns:} \\
+\hspace*{1cm}true if writing the word would cause overflow, false otherwise. \\[1em]
 
-        
-        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-void process_text_file(const FontData *font_data);
-        \end{minted}
-        \textbf{Breif:} Processes a text file and generates G-code for the text. \\
-        \textbf{Parameters:} \\
-        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to use, also containing scale for whitespace between characters. \\[1em]
-        
-        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-void generate_gcode(const FontData *font_data, const char *text);
-        \end{minted}
-        \textbf{Breif:} Generates G-code for a given text string. \\
-        \textbf{Parameters:} \\
-        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to use, also containing scale for whitespace between characters. \\
-        \hspace*{1cm}\texttt{text} -- Text string (single word) to generate G-code for.
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline bool _iswithinBounds(const cursor_t *const self);
+\end{minted}
+\textbf{Breif:} Checks if the current cursor position is within defined boundaries. \\
+\textbf{Details:} \\
+\hspace*{1cm}Compares the current cursor position against the min and max boundaries. If any coordinate is outside the defined limits, the cursor is considered out of bounds. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the cursor structure. \\
+\textbf{Returns:} \\
+\hspace*{1cm}true if the cursor is within bounds, false otherwise. \\[1em]
 
-        \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-void free_font_data(fontData_t *font_data);
-        \end{minted}
-        \textbf{Breif:} Frees the memory allocated for the font data. itterate through all hashNode\_t,fontCharacter\_t and strokes\_t to free memory allocated by malloc\\
-        \textbf{Parameters:} \\
-        \hspace*{1cm}\texttt{font\_data} -- Pointer to the font data to be freed.
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _set(cursor_t *const self, const Coord2D_t position);
+\end{minted}
+\textbf{Breif:} Sets the cursor to a specified position. \\
+\textbf{Details:} \\
+\hspace*{1cm}Assigns the given position to the cursor and then validates that the cursor remains within boundaries. If not, an error is returned. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the cursor structure. \\
+\hspace*{1cm}\texttt{position} -- The new position to set the cursor to. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or CURSOR\_OUT\_OF\_BOUNDS if the position is invalid. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _move(cursor_t *const self, const Coord2D_t delta);
+\end{minted}
+\textbf{Breif:} Moves the cursor by a specified delta. \\
+\textbf{Details:} \\
+\hspace*{1cm}Updates the cursor position by adding the given delta. If this position is out of bounds, the function attempts to switch to a new line. If the position is still invalid, it returns an error. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the cursor structure. \\
+\hspace*{1cm}\texttt{delta} -- The delta by which to move the cursor. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or CURSOR\_OUT\_OF\_BOUNDS if the new position is invalid. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _newline(cursor_t *const self);
+\end{minted}
+\textbf{Breif:} Moves the cursor to a new line. \\
+\textbf{Details:} \\
+\hspace*{1cm}Moves the cursor down one line. This involves setting the x-position to the minimum x-bound and decreasing the y-position by the line spacing. If the new position is invalid, it returns an error. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the cursor structure. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or CURSOR\_OUT\_OF\_BOUNDS if the new position is invalid. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _update(cursor_t *const self);
+\end{minted}
+\textbf{Breif:} Updates the cursor position after advancing by one character. \\
+\textbf{Details:} \\
+\hspace*{1cm}Moves the cursor one character space to the right. If this results in an out-of-bounds position, it attempts to move the cursor to a new line. If still out of bounds, it returns an error. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the cursor structure. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or CURSOR\_OUT\_OF\_BOUNDS if the new position is invalid. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _carriagereturn(cursor_t *const self);
+\end{minted}
+\textbf{Breif:} Moves the cursor to the start of the current line (carriage return). \\
+\textbf{Details:} \\    
+\hspace*{1cm}Resets the x-position of the cursor to the minimum x-bound, emulating a carriage return. If the updated position is out of bounds, it returns an error. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the cursor structure. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or CURSOR\_OUT\_OF\_BOUNDS if the new position is invalid. \\[1em]
+
+\subsection{error.h}
+
+% /**
+%  * @brief Handles and logs the given error code.
+%  *
+%  * This function prints an error message to stderr corresponding to the provided
+%  * error code if `PRINT_ERROR_CODES` is defined. This helps in debugging by
+%  * providing information about why a particular operation failed.
+%  *
+%  * @param[in] error The error code to handle.
+%  * @return The same error code passed in.
+%  */
+% static inline errorCode_t ErrorHandler(const errorCode_t error)
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline errorCode_t ErrorHandler(const errorCode_t error);
+\end{minted}
+\textbf{Breif:} Handles and logs the given error code. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function prints an error message to stderr corresponding to the provided error code if `PRINT\_ERROR\_CODES` is defined. This helps in debugging by providing information about why a particular operation failed. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{error} -- The error code to handle. \\
+\textbf{Returns:} \\
+\hspace*{1cm}The same error code passed in. \\[1em]
+
+% \subsection{coord.h}
+
+% /**
+%  * @brief Adds two 2D coordinates.
+%  *
+%  * @param[in] a The first 2D coordinate.
+%  * @param[in] b The second 2D coordinate.
+%  * @return The result of adding a and b.
+%  */
+% static inline Coord2D_t AddCoord2D(const Coord2D_t a, const Coord2D_t b)
+% {
+%     Coord2D_t result;
+%     result.x = a.x + b.x;
+%     result.y = a.y + b.y;
+%     return result;
+% }
+
+% /**
+%  * @brief Subtracts one 2D coordinate from another.
+%  *
+%  * @param[in] a The 2D coordinate from which to subtract.
+%  * @param[in] b The 2D coordinate to subtract.
+%  * @return The result of subtracting b from a.
+%  */
+% static inline Coord2D_t SubCoord2D(const Coord2D_t a, const Coord2D_t b)
+% {
+%     Coord2D_t result;
+%     result.x = a.x - b.x;
+%     result.y = a.y - b.y;
+%     return result;
+% }
+
+% /**
+%  * @brief Multiplies two 2D coordinates component-wise.
+%  *
+%  * @param[in] a The first 2D coordinate.
+%  * @param[in] b The second 2D coordinate.
+%  * @return The result of multiplying a by b.
+%  */
+% static inline Coord2D_t MulCoord2D(const Coord2D_t a, const Coord2D_t b)
+% {
+%     Coord2D_t result;
+%     result.x = a.x * b.x;
+%     result.y = a.y * b.y;
+%     return result;
+% }
+
+% /**
+%  * @brief Divides one 2D coordinate by another component-wise.
+%  *
+%  * @note Ensure b.x and b.y are not zero.
+%  *
+%  * @param[in] a The 2D coordinate to divide.
+%  * @param[in] b The 2D coordinate to divide by.
+%  * @return The result of dividing a by b.
+%  */
+% static inline Coord2D_t DivCoord2D(const Coord2D_t a, const Coord2D_t b)
+% {
+%     Coord2D_t result;
+%     result.x = a.x / b.x;
+%     result.y = a.y / b.y;
+%     return result;
+% }
+
+% /**
+%  * @brief Scales a 2D coordinate by a given factor.
+%  *
+%  * @param[in] a The 2D coordinate to scale.
+%  * @param[in] scale The factor by which to scale.
+%  * @return The scaled coordinate.
+%  */
+% static inline Coord2D_t ScaleCoord2D(const Coord2D_t a, const double scale)
+% {
+%     Coord2D_t result;
+%     result.x = a.x * scale;
+%     result.y = a.y * scale;
+%     return result;
+% }
+
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline Coord2D_t AddCoord2D(const Coord2D_t a, const Coord2D_t b);
+\end{minted}
+\textbf{Breif:} Adds two 2D coordinates. \\
+\hspace*{1cm}This function adds two 2D coordinates together. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{a} -- The first 2D coordinate. \\
+\hspace*{1cm}\texttt{b} -- The second 2D coordinate. \\
+\textbf{Returns:} \\
+\hspace*{1cm}The result of adding a and b. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline Coord2D_t SubCoord2D(const Coord2D_t a, const Coord2D_t b);
+\end{minted}
+\textbf{Breif:} Subtracts one 2D coordinate from another. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{a} -- The 2D coordinate from which to subtract. \\
+\hspace*{1cm}\texttt{b} -- The 2D coordinate to subtract. \\
+\textbf{Returns:} \\
+\hspace*{1cm}The result of subtracting b from a. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline Coord2D_t MulCoord2D(const Coord2D_t a, const Coord2D_t b);
+\end{minted}
+\textbf{Breif:} Multiplies two 2D coordinates component-wise. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{a} -- The first 2D coordinate. \\
+\hspace*{1cm}\texttt{b} -- The second 2D coordinate. \\
+\textbf{Returns:} \\
+\hspace*{1cm}The result of multiplying a by b. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline Coord2D_t DivCoord2D(const Coord2D_t a, const Coord2D_t b);
+\end{minted}
+\textbf{Breif:} Divides one 2D coordinate by another component-wise. \\
+\textbf{Details:} \\
+\hspace*{1cm}Ensure b.x and b.y are not zero. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{a} -- The 2D coordinate to divide. \\
+\hspace*{1cm}\texttt{b} -- The 2D coordinate to divide by. \\
+\textbf{Returns:} \\
+\hspace*{1cm}The result of dividing a by b. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline Coord2D_t ScaleCoord2D(const Coord2D_t a, const double scale);
+\end{minted}
+\textbf{Breif:} Scales a 2D coordinate by a given factor. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{a} -- The 2D coordinate to scale. \\
+\hspace*{1cm}\texttt{scale} -- The factor by which to scale. \\
+\textbf{Returns:} \\
+\hspace*{1cm}The scaled coordinate. \\[1em]
+
+\subsection{fontData.*}
+
+% /**
+%  * @brief Inserts a font character into the hash table.
+%  * Allocates a new hash node and places it in the hash table at the index computed by
+%  * the hash function. In the event of a collision, the new node is linked into the existing chain.
+%  * @param[in,out] self       Pointer to the fontData_t instance.
+%  * @param[in]     character  Pointer to the font character to insert.
+%  * @return SUCCESS on success, or an appropriate error code:
+%  *         - ERROR_NULL_POINTER if `self` or `character` is NULL.
+%  *         - ERROR_MEMORY_ALLOCATION_FAILED if memory allocation for the node fails.
+%  */
+% static errorCode_t _insert(fontData_t *const self, fontCharacter_t *const character);
+
+% /**
+%  * @brief Looks up a font character in the hash table by ASCII key.
+%  * @details
+%  * Computes the hash index for the given ASCII key and searches the chain at that index.
+%  * If the character is found, returns a pointer to the corresponding fontCharacter_t.
+%  * @param[in] self      Pointer to the fontData_t instance.
+%  * @param[in] asciiKey  ASCII key of the font character to retrieve.
+%  * @return Pointer to the corresponding fontCharacter_t on success, or NULL if not found or
+%  *         if `self` is NULL.
+%  */
+% static const fontCharacter_t *_lookup(const fontData_t *const self, const char asciiKey);
+
+% /**
+%  * @brief Scales all strokes in the font data by a given factor.
+%  * @details
+%  * Iterates through each font character in the hash table and multiplies the x and y
+%  * components of each stroke by the given scale factor.
+%  * @param[in,out] fontData Pointer to the fontData_t instance.
+%  * @param[in]     scale    The factor by which to scale the font strokes.
+%  * @return SUCCESS on success, or ERROR_NULL_POINTER if `fontData` is NULL.
+%  */
+% static errorCode_t _scale(fontData_t *const self, double scale);
+
+% /**
+%  * @brief Hash function for converting a character key into an index.
+%  * @details
+%  * Returns the modulo of the ASCII value of the character by 128, ensuring an index in [0,127].
+%  * @param[in] key The ASCII character key to hash.
+%  * @return An unsigned integer in [0,127] representing the hash table index.
+%  */
+% static inline unsigned int _hash_function(char key);
+
+% /**
+%  * @brief Parses the font file and populates the hash table with font characters.
+%  * @details
+%  * Opens the specified file, reads font character definitions, constructs
+%  * fontCharacter_t objects, and inserts them into the hash table.
+%  * @param[in,out] fontData Pointer to the fontData_t instance to populate.
+%  * @param[in]     filename Name of the font file to parse.
+%  * @return SUCCESS on success, or an appropriate error code:
+%  *         - ERROR_NULL_POINTER if `fontData` or `filename` is NULL.
+%  *         - ERROR_OPEN_FILE if the file cannot be opened.
+%  *         - ERROR_MEMORY_ALLOCATION_FAILED if memory allocation for font characters fails.
+%  */
+% static errorCode_t _parse(fontData_t *const self, const char *const filename);
+
+% /**
+%  * @brief Frees all memory allocated for the font data, including the hash table and its contents.
+%  * @details
+%  * Iterates over the hash table, frees all font characters and hash nodes, and then frees
+%  * the fontData_t structure itself.
+%  * @param[in,out] self Pointer to the fontData_t instance to free.
+%  * @return SUCCESS on success, or ERROR_NULL_POINTER if `self` is NULL.
+%  */
+% static errorCode_t _free(fontData_t *self);
+
+% /**
+%  * @brief Constructs and initializes a new fontData_t object.
+%  * @details Allocates memory for the fontData_t structure, sets the function pointers, and
+%  * initializes the hash table to NULL. This structure can then be used to insert, lookup,
+%  * scale, and parse font characters, and finally be freed when no longer needed.
+%  * @return A pointer to the newly created fontData_t object, or NULL if allocation fails.
+%  */
+% fontData_t *fontDataConstructor(void);
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+fontData_t *fontDataConstructor(void);
+\end{minted}
+\textbf{Breif:} Constructs and initializes a new fontData\_t object. \\
+\textbf{Details:} \\
+\hspace*{1cm}Allocates memory for the fontData\_t structure, sets the function pointers, and initializes the hash table to NULL. This structure can then be used to insert, lookup, scale, and parse font characters, and finally be freed when no longer needed. \\
+\textbf{Returns:} \\
+\hspace*{1cm}A pointer to the newly created fontData\_t object, or NULL if allocation fails. \\[1em]
+
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _insert(fontData_t *const self, fontCharacter_t *const character);
+\end{minted}
+\textbf{Breif:} Inserts a font character into the hash table. \\
+\textbf{Details:} \\
+\hspace*{1cm}Allocates a new hash node and places it in the hash table at the index computed by the hash function. In the event of a collision, the new node is linked into the existing chain. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the fontData\_t instance. \\
+\hspace*{1cm}\texttt{character} -- Pointer to the font character to insert. \\
+\textbf{Returns:} \\
+\hspace*{1cm}- SUCCESS on success, or an appropriate error code: \\
+\hspace*{1cm}- ERROR\_NULL\_POINTER if `self` or `character` is NULL. \\
+\hspace*{1cm}- ERROR\_MEMORY\_ALLOCATION\_FAILED if memory allocation for the node fails. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static const fontCharacter_t *_lookup(const fontData_t *const self, const char asciiKey);
+\end{minted}
+\textbf{Breif:} Looks up a font character in the hash table by ASCII key. \\
+\textbf{Details:} \\
+\hspace*{1cm}Computes the hash index for the given ASCII key and searches the chain at that index. If the character is found, returns a pointer to the corresponding fontCharacter\_t. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the fontData\_t instance. \\
+\hspace*{1cm}\texttt{asciiKey} -- ASCII key of the font character to retrieve. \\
+\textbf{Returns:} \\
+\hspace*{1cm}Pointer to the corresponding fontCharacter\_t on success, or NULL if not found or if `self` is NULL. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _scale(fontData_t *const self, double scale);
+\end{minted}
+\textbf{Breif:} Scales all strokes in the font data by a given factor. \\
+\textbf{Details:} \\
+\hspace*{1cm}Iterates through each font character in the hash table and multiplies the x and y components of each stroke by the given scale factor. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{fontData} -- Pointer to the fontData\_t instance. \\
+\hspace*{1cm}\texttt{scale} -- The factor by which to scale the font strokes. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or ERROR\_NULL\_POINTER if `fontData` is NULL. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static inline unsigned int _hash_function(char key);
+\end{minted}
+\textbf{Breif:} Hash function for converting a character key into an index. \\
+\textbf{Details:} \\
+\hspace*{1cm}Returns the modulo of the ASCII value of the character by 128, ensuring an index in [0,127]. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{key} -- The ASCII character key to hash. \\
+\textbf{Returns:} \\
+\hspace*{1cm}An unsigned integer in [0,127] representing the hash table index. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _parse(fontData_t *const self, const char *const filename);
+\end{minted}
+\textbf{Breif:} Parses the font file and populates the hash table with font characters. \\
+\textbf{Details:} \\
+\hspace*{1cm}Opens the specified file, reads font character definitions, constructs fontCharacter\_t objects, and inserts them into the hash table. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{fontData} -- Pointer to the fontData\_t instance to populate. \\
+\hspace*{1cm}\texttt{filename} -- Name of the font file to parse. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or an appropriate error code: \\
+\hspace*{1cm}- ERROR\_NULL\_POINTER if `fontData` or `filename` is NULL. \\
+\hspace*{1cm}- ERROR\_OPEN\_FILE if the file cannot be opened. \\
+\hspace*{1cm}- ERROR\_MEMORY\_ALLOCATION\_FAILED if memory allocation for font characters fails. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _free(fontData_t *self);
+\end{minted}
+\textbf{Breif:} Frees all memory allocated for the font data, including the hash table and its contents. \\
+\textbf{Details:} \\
+\hspace*{1cm}Iterates over the hash table, frees all font characters and hash nodes, and then frees the fontData\_t structure itself. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the fontData\_t instance to free. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or ERROR\_NULL\_POINTER if `self` is NULL. \\[1em]
+
+
+
+
+\subsection{fontCharacter.*}
+
+
+% /**
+%  * @brief Appends a single stroke to a fontCharacter_t object.
+%  * @details
+%  * Checks the validity of the fontCharacter_t instance and ensures that there
+%  * is space left to append the provided stroke. If successful, the stroke is
+%  * appended and the stroke index is incremented.
+%  * @param[in,out] self   Pointer to the fontCharacter_t structure to modify.
+%  * @param[in]     stroke The stroke to append.
+%  * @return SUCCESS on success, or an appropriate error code:
+%  *         - ERROR_NULL_POINTER if `self` is NULL.
+%  *         - ERROR_OUT_OF_BOUNDS if no more strokes can be appended.
+%  */
+% static errorCode_t _appendStroke(fontCharacter_t *const self, const stroke_t stroke);
+
+% /**
+%  * @brief Frees the memory allocated for a fontCharacter_t object.
+%  * @details
+%  * Deallocates the memory allocated for the strokes and the fontCharacter_t
+%  * instance itself. After calling this function, the pointer to fontCharacter_t
+%  * should no longer be used.
+%  * @param[in,out] self Pointer to the fontCharacter_t to free.
+%  * @return SUCCESS on success, or ERROR_NULL_POINTER if `self` is NULL.
+%  */
+% static errorCode_t _free(fontCharacter_t *self);
+
+% /**
+%  * @brief Constructs and initializes a new fontCharacter_t object.
+%  * @details
+%  * This function allocates memory for a fontCharacter_t structure, initializes its
+%  * fields, and allocates memory for the specified number of strokes. If memory
+%  * allocation fails, an error is reported, and NULL is returned. The caller must
+%  * eventually call the `free` function pointer within the structure to properly
+%  * deallocate the memory.
+%  * @param[in] asciiKey    The ASCII character key that this font character represents.
+%  * @param[in] numStrokes  The number of strokes that will be associated with this font character.
+%  * @return A pointer to the newly created fontCharacter_t object, or NULL if allocation fails.
+%  */
+% fontCharacter_t *fontCharConstuctor(const char asciiKey, const uint8_t numStrokes);
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+fontCharacter_t *fontCharConstuctor(const char asciiKey, const uint8_t numStrokes);
+\end{minted}
+\textbf{Breif:} Constructs and initializes a new fontCharacter\_t object. \\
+\textbf{Details:} \\
+\hspace*{1cm}This function allocates memory for a fontCharacter\_t structure, initializes its fields, and allocates memory for the specified number of strokes. If memory allocation fails, an error is reported, and NULL is returned. The caller must eventually call the `free` function pointer within the structure to properly deallocate the memory. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{asciiKey} -- The ASCII character key that this font character represents. \\
+\hspace*{1cm}\texttt{numStrokes} -- The number of strokes that will be associated with this font character. \\
+\textbf{Returns:} \\
+\hspace*{1cm}A pointer to the newly created fontCharacter\_t object, or NULL if allocation fails. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _appendStroke(fontCharacter_t *const self, const stroke_t stroke);
+\end{minted}
+\textbf{Breif:} Appends a single stroke to a fontCharacter\_t object. \\
+\textbf{Details:} \\
+\hspace*{1cm}Checks the validity of the fontCharacter\_t instance and ensures that there is space left to append the provided stroke. If successful, the stroke is appended and the stroke index is incremented. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the fontCharacter\_t structure to modify. \\
+\hspace*{1cm}\texttt{stroke} -- The stroke to append. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or an appropriate error code: \\
+\hspace*{1cm}- ERROR\_NULL\_POINTER if `self` is NULL. \\
+\hspace*{1cm}- ERROR\_OUT\_OF\_BOUNDS if no more strokes can be appended. \\[1em]
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+static errorCode_t _free(fontCharacter_t *self);
+\end{minted}
+\textbf{Breif:} Frees the memory allocated for a fontCharacter\_t object. \\
+\textbf{Details:} \\
+\hspace*{1cm}Deallocates the memory allocated for the strokes and the fontCharacter\_t instance itself. After calling this function, the pointer to fontCharacter\_t should no longer be used. \\
+\textbf{Parameters:} \\
+\hspace*{1cm}\texttt{self} -- Pointer to the fontCharacter\_t to free. \\
+\textbf{Returns:} \\
+\hspace*{1cm}SUCCESS on success, or ERROR\_NULL\_POINTER if `self` is NULL. \\[1em]
+
+
+
+% \begin{longtable}{|>{\raggedright\arraybackslash}m{0.17\textwidth}|>{\raggedright\arraybackslash}m{0.2\textwidth}|>{\raggedright\arraybackslash}m{0.2\textwidth}|>{\raggedright\arraybackslash}m{0.35\textwidth}|}
+%     \hline
+%     \textbf{Function} & \textbf{Test Case} & \textbf{Test Data} & \textbf{Expected Output} \\ \hline
+%     GetUserScale & correct input & 4mm & "Enter the desired text height (4-10 mm): ", return SUCCESS\\ \hline
+%     GetUserScale & incorrect input & 11mm & "Enter the desired text height (4-10 mm): ", "Invalid input. Height must be between 4 and 10 mm.", return ERROR\_INVALID\_SCALE\_INPUT\\ \hline
+%     GetUserScale & incorrect input & 3mm & "Enter the desired text height (4-10 mm): ", "Invalid input. Height must be between 4 and 10 mm.", return ERROR\_INVALID\_SCALE\_INPUT\\ \hline
+%     GetUserScale & incorrect input & "abc" & "Enter the desired text height (4-10 mm):", "Invalid input. Height must be between 4 and 10 mm.", return ERROR\_INVALID\_SCALE\_INPUT\\ \hline
+%     GetUserFile & correct input & "test.txt" & "Enter the name of the font file: ", return SUCCESS\\ \hline
+%     GetUserFile & incorrect input & "test" & "Enter the name of the font file: ", "Error opening text file", return ERROR\_OPEN\_FILE\\ \hline
+%     HomeRobot & Normal operation & HOME\_X \_VALUE\_MM = 0, HOME\_Y \_VALUE\_MM = 0 & SendCommand("S0 G0 X0 Y0"), return SUCCESS\\ \hline   
+%     HomeRobot & Normal operation & HOME\_X \_VALUE\_MM = 10, HOME\_Y \_VALUE\_MM = 10 & SendCommand("S0 G0 X10 Y10"), return SUCCESS\\ \hline
+%     SendStoke & Pen up & stroke.pen = UP & SendCommands("S0 G0 X0 Y0"), return SUCCESS\\ \hline
+%     SendStoke & Pen down & stroke.pen = DOWN & SendCommands("S1000 G1 X0 Y0"), return SUCCESS\\ \hline
+%     StartUpRobot & normal operation & na & SendCommands("G1 X0 Y0 F1000$\backslash$n", "M3$\backslash$n", "S0$\backslash$n"), return SUCCESS\\ \hline
+%     StartUpRobot & bad Com Port & no device connected & "Unable to open COM port", return ERROR\_UNABLE\_TO\_ OPEN\_COM\_PORT\\ \hline
+%     generate\_gcode & NULL font\_data & font\_data=NULL & Error message: "Font data is NULL" \\ \hline
+%     generate\_gcode & test $\backslash$n mechanism & text[0] = "$\backslash$n" & cursor moves to next line with 5mm line spaace\\ \hline
+%     generate\_gcode & test normal case & text[0] = "A" &  normal operation: calls hash\_table\_lookup() and sends G-code to robot, waits of ok response after every send. \\ \hline
+%     generate\_gcode & 4mm test 'A' output & text[0] = "A " & \footnotesize$\begin{array}{cccl}
+%         G0 &X0.00 &Y0.00; & pen\ up\\
+%         G1 &X1.33 &Y4.00; & pen\ down\\
+%         G1 &X2.67 &Y0.00; & pen\ down\\
+%         G0 &X0.67 &Y2.00; & pen\ up\\
+%         G1 &X2.00 &Y2.00; & pen\ down\\
+%         G0 &X4.00 &Y0.00; & pen\ down\\
+%         G0 &x0 &y0; & pen\ up\\
+%         \end{array}$ \\ \hline
+%     generate\_gcode & 10mm test 'A' output & text[0] = "A " & \footnotesize$\begin{array}{cccl}
+%         G0 &X0.00 &Y0.00; & pen\ up\\
+%         G1 &X3.33 &Y10.00; & pen\ down\\
+%         G1 &X6.67 &Y0.00; & pen\ down\\
+%         G0 &X1.67 &Y5.00; & pen\ up\\
+%         G1 &X5.00 &Y5.00; & pen\ down\\
+%         G0 &X10.00 &Y0.00; & pen\ down\\
+%         G0 &x0 &y0; & pen\ up\\
+%         \end{array}$ \\ \hline
+%     generate\_gcode & test multiple letters checking for proper character spacing with 4mm spacing & text[0] = "AA " &  \footnotesize$\begin{array}{cccl}
+%         G0 &X0.00 &Y0.00; & pen\ up\\
+%         G1 &X1.33 &Y4.00; & pen\ down\\
+%         G1 &X2.67 &Y0.00; & pen\ down\\
+%         G0 &X0.67 &Y2.00; & pen\ up\\
+%         G1 &X2.00 &Y2.00; & pen\ down\\
+%         G0 &X4.00 &Y0.00; & pen\ down\\
+%         G0 &X4.00 &Y0.00; & pen\ up\\
+%         G1 &X5.33 &Y4.00; & pen\ down\\
+%         G1 &X6.67 &Y0.00; & pen\ down\\
+%         G0 &X4.67 &Y2.00; & pen\ up\\
+%         G1 &X6.00 &Y2.00; & pen\ down\\
+%         G0 &X8.00 &Y0.00; & pen\ up\\
+%         G0 &X12.00 &Y0.00; & pen\ up\\
+%         G0 &X0 &Y0; & pen\ up\\
+%         \end{array}$ \\ \hline
+%         process\_text\_file & NULL font\_data & font\_data=NULL & Error message: "Error no font data" , return ERROR\_NO\_FONT\_DATA \\ \hline
+%         process\_text\_file & NUL file & filename=NULL & Error message: "Error no text file" , return ERROR\_NO\_TEXT\_NAME \\ \hline
+%         process\_text\_file & Test each word read indvidually & "Hello World" &  normal operation: calls generate\_gcode() twice \\ \hline
+%         \_testWordOverflow & word does overflow & long word & return true \\ \hline
+%         \_testWordOverflow & word does not overflow & short word & return false \\ \hline
+%         \_iswithinBounds & cursor is within bounds & cursor.x = 0, cursor.y = 0 & return true \\ \hline
+%         \_iswithinBounds & cursor is not within bounds & cursor.x = 200, cursor.y = 200 & return false \\ \hline
+%         cursor\_s$::$set & null instance & self = NULL & "Error Null pointer" return ERROR\_NULL\_POINTER \\ \hline
+%         cursor\_s$::$set & normal operation & position = 0,0 & return SUCCESS \\ \hline
+%         cursor\_s$::$set & out of bounds & position = 200,200 & "Cursor is out of bounds", return CURSOR\_OUT\_OF\_BOUNDS \\ \hline
+%         cursor\_s$::$move & normal operation & delta = 1,1 & return SUCCESS \\ \hline
+%         cursor\_s$::$move & NULL instance & self = NULL & "Error Null pointer" return ERROR\_NULL\_POINTER \\ \hline
+%         cursor\_s$::$move & out of bounds & delta = 200,200 & attempt new line else "Cursor is out of bounds", return CURSOR\_OUT\_OF\_BOUNDS \\ \hline
+%         cursor\_s$::$newline & normal operation & na & cursor moves down line, return SUCCESS \\ \hline
+%         cursor\_s$::$newline & NULL instance & self = NULL & "Error Null pointer" return ERROR\_NULL\_POINTER \\ \hline
+%         cursor\_s$::$ carriagereturn & normal operation & na & cursor moves to start of line, return SUCCESS \\ \hline
+%         cursor\_s$::$ carriagereturn & NULL instance & self = NULL & "Error Null pointer" return ERROR\_NULL\_POINTER \\ \hline
+%         cursor\_s$::$update & normal operation & na & cursor moves + character space, return SUCCESS \\ \hline
+%         cursor\_s$::$update & NULL instance & self = NULL & "Error Null pointer" return ERROR\_NULL\_POINTER \\ \hline
+%         cursor\_s$::$update & out of bounds & cursor.x = 200, cursor.y = 200 & attempt newline else "Cursor is out of bounds", return CURSOR\_OUT\_OF\_BOUNDS \\ \hline
+%         ErrorHandler & error & ERROR\_OPEN \_FILE  & "Error opening text file"  \\ \hline
+%         ErrorHandler & error & ERROR\_INVALID \_SCALE\_INPUT  & "Invalid input. Height must be between 4 and 10 mm." \\ \hline
+%         ErrorHandler & error & ERROR\_NO\_TEXT \_NAME  & "Error no text file" \\ \hline
+%         ErrorHandler & error & ERROR\_NO\_FONT \_DATA  & "Error no font data" \\ \hline
+%         ErrorHandler & error & ERROR\_MEMORY \_ALLOCATION \_FAILED & "Memory allocation failed" \\ \hline
+%         ErrorHandler & error & ERROR\_NULL \_POINTER  & "Null pointer" \\ \hline
+%         ErrorHandler & error & ERROR\_UNABLE \_TO\_OPEN\_COM \_PORT  & "Unable to open COM port" \\ \hline
+%         ErrorHandler & error & ERROR\_OUT\_OF \_BOUNDS  & "Out of bounds" \\ \hline
+%         ErrorHandler & error & WORD\_TOO\_LONG  & "Word too long" \\ \hline
+%         ErrorHandler & error & ERROR\_INVALID \_INPUT  & "Invalid input" \\ \hline
+%         ErrorHandler & error & ERROR\_INVALID \_FILE  & "Invalid file" \\ \hline
+%         ErrorHandler & error & ERROR\_INVALID \_FONT\_FILE  & "Invalid font file" \\ \hline
+%         ErrorHandler & error & ERROR\_INVALID \_FONT \_CHARACTER  & "Invalid font character" \\ \hline
+%         ErrorHandler & error & ERROR\_INVALID \_FONT\_STROKE  & "Invalid font stroke" \\ \hline
+%         ErrorHandler & error & ERROR\_INVALID \_FONT\_STROKE \_VEC  & "Invalid font stroke vector" \\ \hline
+%         ErrorHandler & error & ERROR\_INSERT \_CHARACTER  & "Error inserting character" \\ \hline
+%         ErrorHandler & error & ERROR\_APPEND \_STROKE  & "Error appending stroke" \\ \hline
+%         ErrorHandler & error & ERROR\_PARSE \_STROKE  & "Error parsing stroke" \\ \hline
+%         ErrorHandler & error & ERROR \_UNEXPECTED \_EOF  & "Unexpected end of file" \\ \hline
+%         ErrorHandler & error & ERROR\_PARSE \_CHARACTER  & "Error parsing character" \\ \hline
+%         ErrorHandler & error & SUCCESS & no action \\ \hline
+%         AddCoord2D & normal operation & a = (1,1), b = (1,1) & return (2,2) \\ \hline
+%         AddCoord2D & negative values & a = (-1,-1), b = (-1,-1) & return (-2,-2) \\ \hline
+%         SubCoord2D & normal operation & a = (1,1), b = (1,1) & return (0,0) \\ \hline
+%         SubCoord2D & negative values & a = (-1,-1), b = (-1,-1) & return (0,0) \\ \hline
+%         MulCoord2D & normal operation & a = (1,1), b = (1,1) & return (1,1) \\ \hline
+%         MulCoord2D & negative values & a = (-1,-1), b = (-1,-1) & return (1,1) \\ \hline
+%         DivCoord2D & normal operation & a = (1,1), b = (1,1) & return (1,1) \\ \hline
+%         DivCoord2D & negative values & a = (-1,-1), b = (-1,-1) & return (1,1) \\ \hline
+%         ScaleCoord2D & normal operation & a = (1,1), scale = 2 & return (2,2) \\ \hline
+%         ScaleCoord2D & negative values & a = (-1,-1), scale = 2 & return (-2,-2) \\ \hline
+%         fontData Constructor & normal operation & na & return SUCCESS \\ \hline
+%         fontData Constructor & mem allocation fail & simulate malloc failier & return NULL \\ \hline
+%         fontData\_s$::$insert & normal operation & ascii key=0, character= fontCharacter\_t & normal operation: inserts fontCharacter into hash table, return SUCCESS \\ \hline
+%         fontData\_s$::$insert & insert multiple characters & insert 'A', 'B', 'C' & normal operation: inserts fontCharacter into hash table, return SUCCESS \\ \hline
+%         fontData\_s$::$insert & confirm correct operation with fontData\_s$::$lookup & *char = self.lookup(self, key) & char-$>$asciiKey == Key \\ \hline
+%         fontData\_s$::$insert & NULL fontCharacter & character = NULL & "Error Null Pointer", return ERROR\_NULL\_POINTER \\ \hline
+%         fontData\_s$::$insert & NULL self & self = NULL & "Error Null Pointer", return ERROR\_NULL\_POINTER \\ \hline
+%         fontData\_s$::$insert & mem allocation fail & simulate malloc failier & "Memory Allocation failed", ERROR\_MEMORY \_ALLOCATION\_FAILED \\ \hline
+%         fontData\_s$::$lookup & normal operation & ascii = a & return node.character, such that char-$>$asciiKey = a \\ \hline
+%         fontData\_s$::$lookup & NULL self & self = NULL & return NULL \\ \hline
+%         fontData\_s$::$lookup & character not found & ascii = a, without assigning an 'a' & return NULL \\ \hline
+%         fontData\_s$::$scale & NULL font\_data & font\_data=NULL & Error message: "Font data is NULL" \\ \hline
+%         fontData\_s$::$scale & test with 'A' 4mm & \footnotesize$\begin{array}{ccc}
+%             999 &65 &6 \\
+%             0 &0 &0\\
+%             6 &18& 1\\
+%             12 &0& 1\\
+%             3 &9& 0\\
+%             9& 9& 1\\
+%             18 &0& 0\\
+%             \end{array}$ & \footnotesize$\begin{array}{ccc}
+%             999 &65 &6 \\
+%             0 &0 &0\\
+%             1.33 &4.00& 1\\
+%             2.67 &0& 1\\
+%             0.67 &2.00& 0\\
+%             2.00& 2.00& 1\\
+%             4.00 &0& 0\\
+%             \end{array}$ \\ \hline
+%             fontData\_s$::$scale & test with 'A' 10mm & \footnotesize$\begin{array}{ccc}
+%                 999 &65 &6 \\
+%                 0 &0 &0\\
+%                 6 &18& 1\\
+%                 12 &0& 1\\
+%                 3 &9& 0\\
+%                 9& 9& 1\\
+%                 18 &0& 0\\
+%                 \end{array}$ & \footnotesize$\begin{array}{ccc}
+%                 999 &65 &6 \\
+%                 0 &0 &0\\
+%                 3.33 &10.00& 1\\
+%                 6.67 &0& 1\\
+%                 1.67 &5.00& 0\\
+%                 5.00& 5.00& 1\\
+%                 10.00 &0& 0\\
+%                 \end{array}$ \\ \hline
+%         fontData\_s$::$parse & null instance & self = NULL &  "error null pointer", return ERROR\_NULL\_POINTER  \\ \hline
+%         fontData\_s$::$parse & null filename & filename = NULL &  "error null pointer", return ERROR\_NULL\_POINTER  \\ \hline
+%         fontData\_s$::$parse & fopen() fails & filename="font.exe" &  "unable to open file" \\ \hline
+%         fontData\_s$::$parse & memory allocation fails & Simulate malloc failure  &  "Memory allocation failed" return  ERROR\_MEMORY \_ALLOCATION\_FAILED\\ \hline
+%         fontData\_s$::$parse & normal case & filename= "SingleStrokeFont.txt" &  normal operation: calls hash\_table\_insert(), 128 times, return SUCCESS \\ \hline
+%         fontData\_s$::$free & NULL instance & self = NULL &  "error null pointer", return ERROR\_NULL\_POINTER  \\ \hline
+%         fontData\_s$::$free & normal operation & na &  normal operation: frees 128 characters, returns SUCCESS \\ \hline
+%         fontChar Constuctor & normal operation & asciiKey = 'A', numStrokes = 1 & normal operation: returns fontCharacter\_t object, return SUCCESS \\ \hline
+%         fontChar Constuctor & mem allocation fail & simulate malloc failier & "Memory allocation failier", return NULL \\ \hline
+%         fontCharacter\_s $::$appendStroke & normal operation & stroke = stroke\_t & normal operation: appends stroke to fontCharacter\_t object, return SUCCESS \\ \hline
+%         fontCharacter\_s $::$appendStroke & NULL instance & self = NULL & "Error Null Pointer", return ERROR\_NULL\_POINTER \\ \hline
+%         fontCharacter\_s $::$appendStroke & overflow mem allocation & storkeIdx $>$ numStrokes & "Error out of bounds", return ERROR\_OUT\_OF\_BOUNDS \\ \hline
+%         fontCharacter\_s $::$free & NULL instance & self = NULL & "Error Null Pointer", return ERROR\_NULL\_POINTER \\ \hline
+%         fontCharacter\_s $::$free & normal operation & na & normal operation: frees fontCharacter\_t object, return SUCCESS \\ \hline
+%         \end{longtable}
+

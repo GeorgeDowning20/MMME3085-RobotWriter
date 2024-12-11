@@ -1,37 +1,133 @@
 
-\begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
-typedef struct stroke_s{
+% \begin{minted}[bgcolor=cyan!5,fontsize=\small]{c}
+% typedef struct stroke_s{
+%     double x;
+%     double y;
+%     bool pen_state;
+% } stroke_t;
+
+% typedef struct fontCharacter_s{
+%     char ascii_key;
+%     uint8_t num_strokes;
+%     stroke_t *strokes;
+% } fontCharacter_t;
+
+% typedef struct cursor_s {
+%     double x, y;
+% }cursor_t;
+
+% typedef struct hashNode_s {
+%     char key;
+%     fontCharacter_t *character;
+%     struct hashNode_s *next;
+% } hashNode_t;
+
+% typedef struct fontData_s {
+%     double scale:
+%     hashNode_t *table[128]; // Hash table
+% } fontData_t;
+% \end{minted}
+
+\begin{minted}[bgcolor=cyan!5,fontsize=\small,breaklines]{c}
+
+
+typedef struct Coord2D_s
+{
     double x;
     double y;
-    bool pen_state;
+} Coord2D_t;
+
+typedef Coord2D_t Vect2d_t;
+
+typedef struct stroke_s
+{
+    Vect2d_t vec;   
+    bool pen_state; 
 } stroke_t;
 
-typedef struct fontCharacter_s{
-    char ascii_key;
-    uint8_t num_strokes;
-    stroke_t *strokes;
-} fontCharacter_t;
-
-typedef struct cursor_s {
-    double x, y;
-}cursor_t;
-
-typedef struct hashNode_s {
-    char key;
-    fontCharacter_t *character;
-    struct hashNode_s *next;
+typedef struct hashNode_s
+{
+    char key;                   
+    fontCharacter_t *character; 
+    struct hashNode_s *next;   
 } hashNode_t;
 
-typedef struct fontData_s {
-    double scale:
-    hashNode_t *table[128]; // Hash table
-} fontData_t;
-\end{minted}
+typedef struct fontData_s
+{
+    double fontScale;                    
+    hashNode_t *table[ASCII_CHARACTERS]; 
 
-\begin{table}[h!]
+    errorCode_t (*free)(struct fontData_s *self);
+    const fontCharacter_t *(*lookup)(const struct fontData_s *const self, const char ascii_key);
+    errorCode_t (*scale)(struct fontData_s *const self, double scale);
+    errorCode_t (*insert)(struct fontData_s *const self, fontCharacter_t *const character);
+    errorCode_t (*parse)(struct fontData_s *const self, const char *filename);
+} fontData_t;
+
+
+
+typedef struct fontCharacter_s
+{
+    char asciiKey;      
+    uint8_t numStrokes; 
+    uint8_t strokeIdx;  
+    stroke_t *strokes;  
+
+    errorCode_t (*appendStroke)(struct fontCharacter_s *const self, const stroke_t stroke);
+    errorCode_t (*free)(struct fontCharacter_s *self);
+} fontCharacter_t;
+
+
+  typedef struct cursor_s
+{
+    Coord2D_t posisiton;    
+    Coord2D_t homePosition; 
+    Coord2D_t maxPosition;  
+    Coord2D_t minPosition;  
+    bool init;              
+    double scale;           
+    double lineSpace;       
+    double characterSpace;  
+
+    errorCode_t (*set)(struct cursor_s *const self, const Coord2D_t position);
+    errorCode_t (*move)(struct cursor_s *const self, const Coord2D_t delta);
+    errorCode_t (*newline)(struct cursor_s *const self);
+    errorCode_t (*carriagereturn)(struct cursor_s *const self);
+    errorCode_t (*update)(struct cursor_s *const self);
+    bool (*testWordOverflow)(const struct cursor_s *const self, const char *const word);
+} cursor_t;
+
+typedef enum errorCode_e
+{
+    SUCCESS = 0,                    /**< Operation completed successfully. */
+    ERROR_OPEN_FILE,                /**< Error opening text file. */
+    ERROR_INVALID_SCALE_INPUT,      /**< Invalid scale input (out of allowed range). */
+    ERROR_NO_TEXT_FILE,             /**< No text file found. */
+    ERROR_NO_FONT_DATA,             /**< No font data available. */
+    CURSOR_OUT_OF_BOUNDS,           /**< Cursor position is outside the valid range. */
+    FONT_CHARACTER_NOT_FOUND,       /**< Required font character not found in data. */
+    ERROR_MEMORY_ALLOCATION_FAILED, /**< Memory allocation failure. */
+    ERROR_NULL_POINTER,             /**< Null pointer encountered. */
+    ERROR_UNABLE_TO_OPEN_COM_PORT,  /**< Unable to open the COM port. */
+    ERROR_OUT_OF_BOUNDS,            /**< Out-of-bounds error (generic). */
+    WORD_TOO_LONG,                  /**< Provided word is too long. */
+    ERROR_INVALID_INPUT,            /**< Invalid input provided. */
+    ERROR_INVALID_FILE,             /**< Invalid file. */
+    ERROR_INVALID_FONT_FILE,        /**< Invalid font file. */
+    ERROR_INVALID_FONT_CHARACTER,   /**< Invalid font character definition. */
+    ERROR_INVALID_FONT_STROKE,      /**< Invalid font stroke definition. */
+    ERROR_INVALID_FONT_STROKE_VEC,  /**< Invalid font stroke vector. */
+    ERROR_INSERT_CHARACTER,         /**< Error inserting character into data structure. */
+    ERROR_APPEND_STROKE,            /**< Error appending stroke to character. */
+    ERROR_PARSE_STROKE,             /**< Error parsing stroke definition. */
+    ERROR_UNEXPECTED_EOF,           /**< Unexpected end-of-file encountered. */
+    ERROR_PARSE_CHARACTER           /**< Error parsing character definition. */
+} errorCode_t;
+    \end{minted}
+\begin{table}[H]
     \centering
     \adjustbox{max width=\textwidth}{%
-    \begin{tabular}{|l|>{\raggedright\arraybackslash}m{0.15\textwidth}|>{\raggedright\arraybackslash}m{0.7\textwidth}|}
+    \begin{tabular}{|>{\raggedright\arraybackslash}m{0.15\textwidth}|>{\raggedright\arraybackslash}m{0.16\textwidth}|>{\raggedright\arraybackslash}m{0.75\textwidth}|}
     \hline
     \textbf{Name}         & \textbf{Data Type}               & \textbf{Rationale}                                                                                      \\ \hline
 
@@ -39,34 +135,34 @@ typedef struct fontData_s {
     FILE
     & part of stdio.h, used to define a file which can be opened with fopen() and worked on with other functions\\ \hline
 
-    \textbf{scale} & 
-    double
-    & used to scale the gcode font file and character spacing, double for fine presision.\\ \hline
+    \textbf{position, homePosition, maxPosition, minPosition}& 
+    Coord2D\_t& 2d coordinate system, with double presision to ensure maximum operational precision\\ \hline 
 
+ \textbf{vec}& Vect2d\_t&used to form the stroke\_t. inherites Coord2D\_t to allow for polymorphism with functions that take Coord2D\_t as their argument.\\\hline
 
 
     \textbf{strokes}       & 
-    stroke\_t*
-    & structure to hold a single stroke, x and y are double to preserve high presision, and the pen state is bolean because it has 2 states, on or off. memory will be allocated using malloc, so the data type is a pointer hence acts as array \\ \hline
+    stroke\_t& Structure structure to hold a single stroke, x and y are double to preserve high presision, and the pen state is bolean because it has 2 states, on or off. \\ \hline
     
-    \textbf{fontCharacter}     & 
+    \textbf{character}& 
     fontCharacter\_t*
-    & Holds the array of strokes and the metadata for a single character. Because the strokes are dynamically allocated memory, the number of strokes is required to know the length of the array of strokes. A char is one byte and, therefore, can hold all combinations of 128 ASCII codes. num\_strokes is assigned as an 8-bit unsigned integer, where negative values are impossible, and more than 255 is unlikely. memory will be allocated using malloc, so the data type is a pointer hence acts as array.\\ \hline
+    & Holds the array of strokes\_t and the metadata for a single character. Because the strokes are dynamically allocated memory, the number of strokes is required to know the length of the array of strokes. A char is one byte and, therefore, can hold all combinations of 128 ASCII codes. num\_strokes is assigned as an 8-bit unsigned integer, where negative values are impossible, and more than 255 is unlikely. memory will be allocated using malloc, so the data type is a pointer hence acts as array. Additionaly function pointers, for abstraction and polymorphism, are used to call static functions. overloading of free() as well as an append() function.\\ \hline
     
     \textbf{Cursor}       & 
     static cursor\_t
-    & Tracks the current position of the "pen" on the robot's surface for precise placement of letters. double allows for floating point presision. will be declared as static within the generate\_gcode function to keep track of the cursor position. \\ \hline
+    &  Tracks the current position of the "pen" on the robot's surface for precise placement of letters. Also manages the pen, including limiting bounds and applying special characters such as newline, and carridgereturn. Coord2D\_t allows for floating point presision to define, positions, and robot boundarys.. double presision is used to define scale, line space and character space which is precomputed at compile time. will be declared as static within the generate\_gcode function to keep track of the cursor position, thefore a boolean member init, is declared for lasy initilsation. functions pointers include: set, move, newline, carriagereturn and update. These are used to access static functions through the cursor object.\\ \hline
 
     \textbf{hashTable} & 
     hashNode\_t*
     & a pointer to the hash table array, contains the key which is used in the hash function to find the correct FontCharacter pointer. although not neccassary becasue the data ascii font file data is sequencial, a HashNode\_s structure pointer is used for collision handling. memory will be allocated using malloc, so the data type is a pointer hence acts as array.\\ \hline
     
-    \textbf{Font Data} & 
+    \textbf{FontData}& 
     fontData\_t*
-    & A container for holding the hash table array. also holds the scale factor to be used for determining white space. double to preserve presision.\\ \hline
-    
+    & A container for holding the hash table array. also holds the scale factor to be used for determining white space. double to preserve presision. function pointers: free, lookup, scale, insert and parse are also used to access static functions where the class is implemented.\\ \hline
+ \textbf{error}& errorCode\_t & enum because it is a list of grouped identitys where the value is meaningless. contains all of the error codes for the program. is used by ErrorHandler() to display errors when they occour. \\ \hline
     \end{tabular}
     }
     \caption{Primary Data Types for the G-code Printing Program}
     \label{tab:data_types}
     \end{table}
+

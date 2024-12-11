@@ -1,0 +1,80 @@
+\subsection{lib/rs232.c}
+
+rs232 library written by Teunis van Beelen to enable rs232 communication with the robot. It has been modified to work with Mac. flags \_\_linux\_\_ , \_\_FreeBSD\_\_ , \_\_APPLE\_\_ and \_\_WINDOWS\_\_, set by the system are used at compile time to apply the correct implementation for the system. For Mac systems, RS232\_GetPortnr should be used to find the comp port number; else, manually define the comport lookup a table to include the correct port name, e.g., "/dev/tty.usbmodem1101".
+\subsection{lib/rs232.h}
+header file for rs232.c, contains the relevant header files for different systems included at compile time, and contains function prototypes for rs232.c.
+
+\subsection{lib/serial.c}
+Serial communication is a library communicating with the robot via the rs232 library. Compile time logic includes \#defines for Serial\_Mode, to be used when no external device is available to connect to. Also, \#DEBUG\_MODE is used to turn on and off debug print statements. If the system is Linux, this file will define Sleep() as a wrapper for the usleep () function available to Linux/Unix systems.
+\subsection{lib/serial.h}
+Header file for serial.c, contains function prototypes for serial.c and includes the relevant header files for the system at compile time. \#cport\_nr should be defined as the respective comport for Windows systems; for Mac and Linux, this value refers to the index of the comport in the port lookup table, which should be edited in the rs232.c file. additional \#bdrate\ defines the baud rate for the serial communication; for the robot, this should be 115200.
+
+\subsection{src/main.c}
+This is the main entry point for the program. This program initializes the robot, parses font data from a specified font file, and allows the user to specify a text height and input file containing the text to be drawn. It then processes the input text, converts it into G-code, and sends the commands to the robot to draw the text. Finally, it frees allocated resources and concludes the operation. User interface functions are also defined in this file.
+\subsection{src/main.h}
+header for main.c, contains function prototypes for user interface functions and includes the relevant header files for the program.
+
+\subsection{src/robot/robot.c}
+This file implements functions that control a robot through RS232 commands. It includes functionality to Initialize and start up the robot, Move the robot to a home position, Send stroke commands that move the pen or tool along specified coordinates, and toggle its state. The code is based on the example provided for the project.
+\subsection{src/robot/robot.h}
+Header file for robot.c, This file provides the interfaces for controlling the robot's position and movements. It includes functions to start up the robot, send strokes (pen movements) to it, and return it to a 'home' position. It also defines various constants that govern its coordinate space and text dimensions.
+
+% #define MAX_X_VALUE_MM 100.0   /**< Maximum X coordinate value in millimeters. */
+% #define MAX_Y_VALUE_MM 0       /**< Maximum Y coordinate value in millimeters. */
+% #define MIN_X_VALUE_MM 0       /**< Minimum X coordinate value in millimeters. */
+% #define MIN_Y_VALUE_MM -1000.0 /**< Minimum Y coordinate value in millimeters. */
+
+% #define HOME_X_VALUE_MM 0.0 /**< Home position X coordinate in millimeters. */
+% #define HOME_Y_VALUE_MM 0.0 /**< Home position Y coordinate in millimeters. */
+
+% #define CHARACTER_SPACE_MM 18.0 /**< Default spacing in millimeters between characters. */
+% #define LINE_SPACE_MM 5.0       /**< Default line spacing in millimeters. */
+
+% #define MINIMUM_TEXT_HEIGHT_MM 4.0  /**< Minimum permissible text height in millimeters. */
+% #define MAXIMUM_TEXT_HEIGHT_MM 10.0 /**< Maximum permissible text height in millimeters. */
+
+% #define FONT_FILE "SingleStrokeFont.txt" /**< Default font file name. */
+
+\begin{itemize}
+    \setlength\itemsep{0pt}
+    \setlength\parskip{0pt}
+    \setlength\parsep{0pt}
+    \item MAX\_X\_VALUE\_MM -- Maximum X coordinate value in millimeters.
+    \item MAX\_Y\_VALUE\_MM -- Maximum Y coordinate value in millimeters.
+    \item MIN\_X\_VALUE\_MM -- Minimum X coordinate value in millimeters.
+    \item MIN\_Y\_VALUE\_MM -- Minimum Y coordinate value in millimeters.
+    \item HOME\_X\_VALUE\_MM -- Home position X coordinate in millimeters.
+    \item HOME\_Y\_VALUE\_MM -- Home position Y coordinate in millimeters.
+    \item CHARACTER\_SPACE\_MM -- Default spacing in millimeters between characters.
+    \item LINE\_SPACE\_MM -- Default line spacing in millimeters.
+    \item MINIMUM\_TEXT\_HEIGHT\_MM -- Minimum permissible text height in millimeters.
+    \item MAXIMUM\_TEXT\_HEIGHT\_MM -- Maximum permissible text height in millimeters.
+    \item FONT\_FILE -- Default font file name.
+\end{itemize}
+
+
+\subsection{src/robot/gcode.c}
+Implementation of text processing functions that generate G-code from text using font data. Processes a text string and generates corresponding G-code commands based on the provided font data. Reads a text file, processes each word, and utilizes `generate\_gcode` to convert the text into G-code.
+\subsection{src/robot/gcode.h}
+header file for gcode.c, contains declarations for text processing functions that utilize font data and robot movement.
+
+
+\subsection{src/robot/cursor.c}
+This file manages the cursor position and movement within predefined boundaries, providing functions to set, move, and return to a new line, handle carriage returns, update positioning, and check for word overflow conditions. It also contains the cursor object constructor, which is publicly accessible.
+\subsection{src/robot/cursor.h}
+Header file for cursor.c, contains declarations of the cursor object and constructor functions for cursor management.
+
+\subsection{src/misc/coord.h}
+Defines basic 2d coordinate type and basic operations for 2d coordinates, including addition, subtraction, multiplication, division, and scaling.
+\subsection{src/misc/error.h}
+Defines error codes for the program. It defines a function to handle errors and print messages to the console. requires \#PRINT\_ERROR\_CODES to be defined for printf statements to be compiled.
+
+\subsection{src/font/fontChar.c}
+This header file provides the declarations for the fontCharacter\_t structure and its associated functions. The fontCharacter\_t represents a font character defined by a sequence of strokes. Each stroke indicates a movement of the pen (with pen up or pen down states) to draw the character. The file also defines the fontCharConstructor function which creates and initializes a fontCharacter\_t instance.
+\subsection{src/font/fontChar.h}
+This file provides the functionality to store and manage font characters as a series of strokes. It includes functions to append and free character strokes and a constructor to create a new font character.
+
+\subsection{src/font/dataData.c}
+This file provides the functionality to store and manage font characters inside a hash table. Each font character is associated with an ASCII key and is stored as a series of strokes. The hash table uses chaining to handle collisions, allowing multiple font characters with the same hash to be stored as a linked list of nodes. Functions are provided to insert and look up font characters, scale the strokes of all font characters by a given factor, parse a font file to populate the hash table, and free all allocated resources.
+\subsection{src/font/fontData.h}
+This header defines the fontData\_t structure and related components for storing and managing font characters in a hash table. Each entry in the hash table corresponds to an ASCII character and its associated fontCharacter\_t object. The fontData\_t structure provides function pointers for operations such as inserting, looking up, scaling, parsing from a file, and freeing the entire font data structure. The size of the ASCII standard is defined as 128 in a macro.
