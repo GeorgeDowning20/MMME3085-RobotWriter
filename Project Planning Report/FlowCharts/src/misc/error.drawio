@@ -1,0 +1,454 @@
+<mxfile host="65bd71144e">
+    <diagram id="afJgA6YJ7kgfRQqBY9Ge" name="Page-1">
+        <mxGraphModel dx="7211" dy="5073" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="553" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="438" target="441">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="438" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(220, 220, 170); font-size: 12px;&quot;&gt;cursorConstructor&lt;/span&gt;&lt;span style=&quot;color: rgb(220, 220, 170); font-size: 12px;&quot;&gt;()&lt;/span&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-3180" y="-2149" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="439" value="&lt;span style=&quot;font-size: 30px;&quot;&gt;error.h&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=#333333;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-2640" y="-2299" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="440" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(156, 220, 254); font-size: 12px;&quot;&gt;error&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2370" y="-170" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="452" style="edgeStyle=none;html=1;labelBackgroundColor=none;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#333333;" edge="1" parent="1" source="441" target="450">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="472" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="441" target="454">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="441" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_OPEN_FILE&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-2061" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="578" style="edgeStyle=none;html=1;labelBackgroundColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#333333;" edge="1" parent="1" source="450" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2610" y="-336.6666666666667" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-1994"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="450" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Error opening text file&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-2033" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="544" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="454" target="475">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="561" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="454" target="455">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="454" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_INVALID-_SCALE_INPUT&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-1893.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="577" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="455" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-1826"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="455" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&amp;nbsp; &quot;Invalid input.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&amp;nbsp;Height must be&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&amp;nbsp;between 4&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(206, 145, 120);&quot;&gt;and&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(206, 145, 120);&quot;&gt;&amp;nbsp;10 mm.&lt;/span&gt;&lt;span style=&quot;color: rgb(215, 186, 125);&quot;&gt;\n&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-1865.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="474" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="475" target="478">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="562" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="475" target="476">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="475" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_NO_TEXT_FILE&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-1732" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="576" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="476" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-1664"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="476" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Error no text&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&amp;nbsp;file&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-1704" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="545" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="478" target="482">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="563" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="478" target="479">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="478" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_NO_FONT_DATA&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-1564.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="575" style="edgeStyle=none;html=1;labelBackgroundColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#333333;" edge="1" parent="1" source="479" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2610" y="-358.8888888888889" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-1497"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="479" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Error no font&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&amp;nbsp;data&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-1536.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="481" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="482" target="485">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="564" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="482" target="483">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="482" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;CURSOR_OUT_OF-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;_BOUNDS&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-1400" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="574" style="edgeStyle=none;html=1;labelBackgroundColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#333333;" edge="1" parent="1" source="483" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2610" y="-360" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-1332"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="483" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Cursor out of&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&amp;nbsp;bounds&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-1372" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="546" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="485" target="489">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="565" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="485" target="486">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="485" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;FONT_CHARACTER-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;_NOT_FOUND&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-1232.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="573" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="486" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-1165"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="486" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Font character not found in data&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-1204.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="488" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="489" target="492">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="566" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="489" target="490">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="489" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_MEMORY&lt;/span&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;_ALLOCATION&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;-_FAILED&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-1071" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="572" style="edgeStyle=none;html=1;labelBackgroundColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#333333;" edge="1" parent="1" source="490" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2640" y="-1000" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-1003"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="490" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Memory allocation failed&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-1043" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="547" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="492" target="496">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="567" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="492" target="493">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="492" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_NULL_POINTER&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-903.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="571" style="edgeStyle=none;html=1;labelBackgroundColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#333333;" edge="1" parent="1" source="493" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2610" y="-360" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-836"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="493" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Null pointer&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-875.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="495" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="496" target="499">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="568" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="496" target="497">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="496" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_UNABLE_TO-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;_OPEN_COM_PORT&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-740" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="560" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="497" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-672"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="497" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Unable to open COM port&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-712" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="548" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="499" target="541">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="569" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="499" target="500">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="499" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_OUT_OF_BOUNDS&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-572.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="552" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="500" target="550">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-2610" y="-505"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="500" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Out of bounds&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-544.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="501" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="503" target="504">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="502" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="503" target="506">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="503" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_INVALID_FONT-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;_STROKE_VEC&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-1054" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="584" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="504" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-986"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="504" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Invalid font stroke vector&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-1026" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="505" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="506" target="507">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="557" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="506" target="531">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="506" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_INSERT-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;_CHARACTER&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-886.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="583" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="507" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-819"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="507" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Error inserting character&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-858.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="508" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="510" target="511">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="509" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="510" target="513">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="510" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;WORD_TOO_LONG&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-2061" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="590" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="511" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-1993"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="511" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Word too long&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-2033" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="512" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="513" target="514">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="554" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="513" target="517">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="513" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_INVALID_INPUT&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-1893.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="589" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="514" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-1826"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="514" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Invalid input&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-1865.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="515" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="517" target="518">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="516" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="517" target="520">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="517" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_INVALID_FILE&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-1732" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="588" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="518" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-1664"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="518" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Invalid file&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-1704" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="519" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="520" target="521">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="555" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="520" target="524">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="520" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_INVALID-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;_FONT_FILE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-1564.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="587" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="521" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-1497"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="521" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Invalid font file&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-1536.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="522" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="524" target="525">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="523" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="524" target="527">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="524" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_INVALID_FONT-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;_CHARACTER&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-1390.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="586" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="525" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-1320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="525" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Invalid font character&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-1362.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="526" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="527" target="528">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="556" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="527" target="503">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="527" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_INVALID_FONT-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;_STROKE&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-1223" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="585" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="528" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-1155"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="528" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Invalid font&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&amp;nbsp;stroke&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-1195" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="529" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="531" target="532">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="530" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="531" target="534">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="531" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_APPEND_STROKE&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-712" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="582" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="532" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-644"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="532" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Error appending stroke&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-684" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="533" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="534" target="535">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="558" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="534" target="538">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="534" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_PARSE_STROKE&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-544.5" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="581" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="535" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-480"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="535" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Error parsing&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;stroke&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-516.5" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="536" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="538" target="539">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="559" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="538" target="440">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="538" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;color: rgb(204, 204, 204); line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;ERROR_UNEXPECTED-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #4fc1ff;&quot;&gt;_EOF&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2390" y="-370" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="580" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="539" target="579">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1835" y="-303"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="539" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Unexpected end of file&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2135" y="-342" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="549" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="541" target="510">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-3100" y="-160"/>
+                            <mxPoint x="-2420" y="-160"/>
+                            <mxPoint x="-2420" y="-2130"/>
+                            <mxPoint x="-2295" y="-2130"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="570" value="" style="edgeStyle=none;html=1;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="541" target="542">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="541" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(197, 134, 192); font-size: 12px;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204); font-size: 12px;&quot;&gt; (error =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;ERROR_PARSE-&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(79, 193, 255);&quot;&gt;_CHARACTER&lt;/span&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;direction=west;" vertex="1" parent="1">
+                    <mxGeometry x="-3195" y="-400" width="190" height="141" as="geometry"/>
+                </mxCell>
+                <mxCell id="551" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fillColor=#333333;" edge="1" parent="1" source="542" target="550">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="542" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Error parsing character&lt;/span&gt;&lt;span style=&quot;color: #d7ba7d;&quot;&gt;\n&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;direction=west;flipH=1;flipV=1;fillColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="-2940" y="-372" width="180" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="550" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(156, 220, 254); font-size: 12px;&quot;&gt;error&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-2685" y="-357.5" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="579" value="&lt;div style=&quot;color: rgb(204, 204, 204); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;div style=&quot;line-height: 18px; font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(156, 220, 254); font-size: 12px;&quot;&gt;error&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;labelBackgroundColor=none;flipH=1;flipV=1;shadow=0;labelBorderColor=none;fillColor=#333333;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="-1910" y="-170" width="150" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
