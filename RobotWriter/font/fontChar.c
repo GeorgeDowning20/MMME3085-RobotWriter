@@ -2,11 +2,8 @@
  * @file fontChar.c
  * @brief Implementation of fontCharacter_t construction, stroke appending, and memory management.
  * @details
- * This header file provides the declarations for the fontCharacter_t structure and its associated
- * functions. The fontCharacter_t represents a font character defined by a sequence of strokes.
- * Each stroke indicates a movement of the pen (with pen up or pen down states) to draw the character.
- * The file also declares the fontCharConstructor function which creates and initializes a
- * fontCharacter_t instance.
+ * This file provides the functionallity to store and manage font characters as a series of strokes. It inludes
+ * functions to append and free character strokes as well as a constructor to create a new font character.
  * @note View documentation at https://georgedowning20.github.io/MMME3085-RobotWriter/
  */
 
@@ -33,13 +30,6 @@ static errorCode_t _appendStroke(fontCharacter_t *const self, const stroke_t str
  */
 static errorCode_t _free(fontCharacter_t *self);
 
-/**
- * @brief Constructs and initializes a new fontCharacter_t object.
- * @param[in] asciiKey    The ASCII character key that this font character represents.
- * @param[in] numStrokes  The number of strokes that will be associated with this font character.
- * @return A pointer to the newly created fontCharacter_t object, or NULL if allocation fails.
- */
-fontCharacter_t *fontCharConstuctor(const char asciiKey, const uint8_t numStrokes);
 
 ///////////////////////////////////////////////////////////////////////
 //                        PUBLIC   DEFINITIONS                       //

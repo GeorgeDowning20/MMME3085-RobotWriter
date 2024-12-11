@@ -10,8 +10,8 @@
  */
 #pragma once
 
-#include "../lib/rs232.h"
-#include "../lib/serial.h"
+#include "lib/rs232.h"
+#include "lib/serial.h"
 
 #include "font/fontData.h"
 #include "robot/gcode.h"

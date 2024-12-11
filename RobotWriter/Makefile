@@ -3,12 +3,12 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Wpedantic -std=c11 -g
 
 # Directories
-SRC_DIR = src
+
 LIB_DIR = lib
 BUILD_DIR = build
 
 # Source files and executable name
-SOURCES = $(SRC_DIR)/*.c $(SRC_DIR)/font/*.c  $(SRC_DIR)/robot/*.c $(LIB_DIR)/rs232.c $(LIB_DIR)/serial.c
+SOURCES = *.c ./font/*.c  ./robot/*.c $(LIB_DIR)/rs232.c $(LIB_DIR)/serial.c
 EXECUTABLE = $(BUILD_DIR)/RobotWriter
 
 # Required runtime files to copy to build directory

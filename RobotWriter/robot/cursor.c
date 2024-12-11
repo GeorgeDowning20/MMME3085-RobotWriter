@@ -148,6 +148,7 @@ static inline bool _iswithinBounds(const cursor_t *const self)
  */
 static errorCode_t _set(cursor_t *const self, const Coord2D_t position)
 {
+    if(!self) return ErrorHandler(ERROR_NULL_POINTER); // Check if self is NULL
     self->posisiton = position; // Set position to given position
 
     if (!_iswithinBounds(self))                    // Check if cursor is out of bounds
@@ -164,6 +165,7 @@ static errorCode_t _set(cursor_t *const self, const Coord2D_t position)
  */
 static errorCode_t _move(cursor_t *const self, const Coord2D_t delta)
 {
+    if(!self) return ErrorHandler(ERROR_NULL_POINTER); // Check if self is NULL
     self->posisiton = AddCoord2D(self->posisiton, delta); // Move cursor by delta
 
     if (!_iswithinBounds(self)) // Check if cursor is out of bounds
@@ -183,6 +185,7 @@ static errorCode_t _move(cursor_t *const self, const Coord2D_t delta)
  */
 static errorCode_t _newline(cursor_t *const self)
 {
+    if(!self) return ErrorHandler(ERROR_NULL_POINTER); // Check if self is NULL
     const Coord2D_t pos = {self->minPosition.x, self->posisiton.y - self->lineSpace}; // Set new position
     return self->set(self, pos);                                                      // Return error
 }
@@ -194,6 +197,7 @@ static errorCode_t _newline(cursor_t *const self)
  */
 static errorCode_t _carriagereturn(cursor_t *const self)
 {
+    if(!self) return ErrorHandler(ERROR_NULL_POINTER); // Check if self is NULL
     const Coord2D_t pos = {self->minPosition.x, self->posisiton.y}; // Set new position
     return self->set(self, pos);                                    // Return error
 }
@@ -205,6 +209,7 @@ static errorCode_t _carriagereturn(cursor_t *const self)
  */
 static errorCode_t _update(cursor_t *const self)
 {
+    if(!self) return ErrorHandler(ERROR_NULL_POINTER); // Check if self is NULL
     const Coord2D_t delta = {self->characterSpace, 0.0}; // Set delta to character space
     return self->move(self, delta);                      // Move cursor by delta
 }

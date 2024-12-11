@@ -223,7 +223,7 @@ static errorCode_t _parse(fontData_t *const self, const char *const filename)
 
     FILE *file = fopen(filename, "r");        // Open file
     if (!file)                                // Check if file cannot be opened
-        return ErrorHandler(ERROR_OPEN_FILE); // Handle error
+        return ErrorHandler(ERROR_NO_FONT_DATA); // Handle error
 
     char line[256];                         // Buffer for reading lines
     while (fgets(line, sizeof(line), file)) // Read lines from file
@@ -232,7 +232,7 @@ static errorCode_t _parse(fontData_t *const self, const char *const filename)
         if (sscanf(line, "999 %d %d", &id, &numStrokes) != 2) // Parse ID and number of strokes
             break;
 
-        fontCharacter_t *fontChar = fontCharConstuctor((char)id, numStrokes); // Construct font character
+        fontCharacter_t *fontChar = fontCharConstuctor((char)id, (uint8_t)numStrokes); // Construct font character
         if (!fontChar)                                                        // Check if font character is NULL
         {
             fclose(file);                                        // Close file

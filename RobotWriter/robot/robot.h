@@ -11,8 +11,8 @@
 
 #pragma once
 
-#include "../../lib/rs232.h"
-#include "../../lib/serial.h"
+#include "../lib/rs232.h"
+#include "../lib/serial.h"
 #include "../font/fontChar.h"
 #include "../misc/error.h"
 #include "cursor.h"
@@ -24,7 +24,7 @@
 #define MAX_X_VALUE_MM 100.0   /**< Maximum X coordinate value in millimeters. */
 #define MAX_Y_VALUE_MM 0       /**< Maximum Y coordinate value in millimeters. */
 #define MIN_X_VALUE_MM 0       /**< Minimum X coordinate value in millimeters. */
-#define MIN_Y_VALUE_MM -1000.0 /**< Minimum Y coordinate value in millimeters. */
+#define MIN_Y_VALUE_MM -500.0 /**< Minimum Y coordinate value in millimeters. */
 
 #define HOME_X_VALUE_MM 0.0 /**< Home position X coordinate in millimeters. */
 #define HOME_Y_VALUE_MM 0.0 /**< Home position Y coordinate in millimeters. */

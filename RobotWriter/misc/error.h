@@ -139,70 +139,70 @@ static inline errorCode_t ErrorHandler(const errorCode_t error)
     switch (error)
     {
     case ERROR_OPEN_FILE:
-        perror("Error opening text file\n");
+        perror("Error opening text file ");
         break;
     case ERROR_INVALID_SCALE_INPUT:
-        perror("Invalid input. Height must be between 4 and 10 mm.\n");
+        perror("Invalid input. Height must be between 4 and 10 mm. ");
         break;
     case ERROR_NO_TEXT_FILE:
-        perror("Error no text file\n");
+        perror("Error no text file ");
         break;
     case ERROR_NO_FONT_DATA:
-        perror("Error no font data\n");
+        perror("Error no font data ");
         break;
     case CURSOR_OUT_OF_BOUNDS:
-        perror("Cursor out of bounds\n");
+        perror("Cursor out of bounds ");
         break;
     case FONT_CHARACTER_NOT_FOUND:
-        perror("Font character not found in data\n");
+        perror("Font character not found in data ");
         break;
     case ERROR_MEMORY_ALLOCATION_FAILED:
-        perror("Memory allocation failed\n");
+        perror("Memory allocation failed ");
         break;
     case ERROR_NULL_POINTER:
-        perror("Null pointer\n");
+        perror("Null pointer ");
         break;
     case ERROR_UNABLE_TO_OPEN_COM_PORT:
-        perror("Unable to open COM port\n");
+        perror("Unable to open COM port ");
         break;
     case ERROR_OUT_OF_BOUNDS:
-        perror("Out of bounds\n");
+        perror("Out of bounds ");
         break;
     case WORD_TOO_LONG:
-        perror("Word too long\n");
+        perror("Word too long ");
         break;
     case ERROR_INVALID_INPUT:
-        perror("Invalid input\n");
+        perror("Invalid input ");
         break;
     case ERROR_INVALID_FILE:
-        perror("Invalid file\n");
+        perror("Invalid file ");
         break;
     case ERROR_INVALID_FONT_FILE:
-        perror("Invalid font file\n");
+        perror("Invalid font file ");
         break;
     case ERROR_INVALID_FONT_CHARACTER:
-        perror("Invalid font character\n");
+        perror("Invalid font character ");
         break;
     case ERROR_INVALID_FONT_STROKE:
-        perror("Invalid font stroke\n");
+        perror("Invalid font stroke ");
         break;
     case ERROR_INVALID_FONT_STROKE_VEC:
-        perror("Invalid font stroke vector\n");
+        perror("Invalid font stroke vector ");
         break;
     case ERROR_INSERT_CHARACTER:
-        perror("Error inserting character\n");
+        perror("Error inserting character ");
         break;
     case ERROR_APPEND_STROKE:
-        perror("Error appending stroke\n");
+        perror("Error appending stroke ");
         break;
     case ERROR_PARSE_STROKE:
-        perror("Error parsing stroke\n");
+        perror("Error parsing stroke ");
         break;
     case ERROR_UNEXPECTED_EOF:
-        perror("Unexpected end of file\n");
+        perror("Unexpected end of file ");
         break;
     case ERROR_PARSE_CHARACTER:
-        perror("Error parsing character\n");
+        perror("Error parsing character ");
         break;
     default:
         /* No action for SUCCESS or unspecified errors. */
