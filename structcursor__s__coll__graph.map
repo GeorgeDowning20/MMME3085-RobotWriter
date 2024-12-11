@@ -1,0 +1,4 @@
+<map id="cursor_s" name="cursor_s">
+<area shape="rect" id="node1" title="Structure representing the cursor position and related settings." alt="" coords="13,139,89,165"/>
+<area shape="rect" id="node2" href="$structCoord2D__s.html" title="Represents a point in 2D space." alt="" coords="5,5,97,32"/>
+</map>

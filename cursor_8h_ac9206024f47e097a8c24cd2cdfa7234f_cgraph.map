@@ -1,0 +1,12 @@
+<map id="cursorConstructor" name="cursorConstructor">
+<area shape="rect" id="node1" title="Constructs and initializes a new cursor_t object." alt="" coords="5,132,143,159"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#a28f88c371fa702d0ff93c682e2686cf7" title="Moves the cursor to the start of the current line (carriage return)." alt="" coords="203,5,324,32"/>
+<area shape="rect" id="node4" href="$cursor_8c.html#abae14e94f199f0a08c0d21080564e52e" title="Moves the cursor by a specified delta." alt="" coords="230,208,297,235"/>
+<area shape="rect" id="node7" href="$cursor_8c.html#a512b5b1efe20e69fcbfc7525ba3b2dc0" title="Moves the cursor to a new line." alt="" coords="223,56,303,83"/>
+<area shape="rect" id="node8" href="$cursor_8c.html#acbd74b57e2f2b6852d13f61c905d82fc" title="Sets the cursor to a specified position." alt="" coords="239,157,288,184"/>
+<area shape="rect" id="node9" href="$cursor_8c.html#a7a85519c0c8c138cb884fdac97049cd0" title="Checks if the given word would overflow the current cursor boundaries." alt="" coords="191,259,336,285"/>
+<area shape="rect" id="node10" href="$cursor_8c.html#ae6cd8baec7e9a446d286b99ba00781c4" title="Updates the cursor position after advancing by one character." alt="" coords="226,107,301,133"/>
+<area shape="rect" id="node3" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="396,107,500,133"/>
+<area shape="rect" id="node5" href="$cursor_8c.html#afe2261ec63130405e2211af6c13accec" title="Checks if the current cursor position is within defined boundaries." alt="" coords="384,157,512,184"/>
+<area shape="rect" id="node6" href="$coord_8h.html#a5bc8e590b6856be3e274cde788d2428a" title="Adds two 2D coordinates." alt="" coords="397,208,499,235"/>
+</map>

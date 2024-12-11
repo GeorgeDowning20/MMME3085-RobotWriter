@@ -1,0 +1,13 @@
+<map id="fontDataConstructor" name="fontDataConstructor">
+<area shape="rect" id="node1" title="Constructs and initializes a new fontData_t object." alt="" coords="5,132,160,159"/>
+<area shape="rect" id="node2" href="$fontData_8c.html#ac0b2ffe66e9981ba5b31a1b3a5d4c1cb" title="Frees all memory allocated for the font data, including the hash table and its contents." alt="" coords="375,5,429,32"/>
+<area shape="rect" id="node3" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="691,183,795,209"/>
+<area shape="rect" id="node4" href="$fontData_8c.html#ae4a312d71725a88111461319b5991a10" title="Inserts a font character into the hash table." alt="" coords="211,107,277,133"/>
+<area shape="rect" id="node6" href="$fontData_8c.html#a2df7b9501d858fb603602d9f347ec32b" title="Looks up a font character in the hash table by ASCII key." alt="" coords="208,157,280,184"/>
+<area shape="rect" id="node7" href="$fontData_8c.html#a8bd89c8b268a23116986d894cc8efe0c" title="Parses the font file and populates the hash table with font characters." alt="" coords="211,208,277,235"/>
+<area shape="rect" id="node11" href="$fontData_8c.html#a16ca292d5c313c59a91c12c67d3d5a3c" title="Scales all strokes in the font data by a given factor." alt="" coords="552,360,615,387"/>
+<area shape="rect" id="node5" href="$fontData_8c.html#a4fea98c9f13927078b0353ad14860438" title="Hash function for converting a character key into an index." alt="" coords="342,157,462,184"/>
+<area shape="rect" id="node8" href="$fontChar_8c.html#a456baedfa389ab308959d42234d26c99" title="Constructs and initializes a new fontCharacter_t object." alt="" coords="328,259,476,285"/>
+<area shape="rect" id="node9" href="$fontChar_8c.html#aa686165c9e06428bb42095cd9da1c646" title="Appends a single stroke to a fontCharacter_t object." alt="" coords="524,259,643,285"/>
+<area shape="rect" id="node10" href="$fontChar_8c.html#a52c7c85f6b59489920974e2a467d1574" title="Frees the memory allocated for a fontCharacter_t object." alt="" coords="556,309,611,336"/>
+</map>

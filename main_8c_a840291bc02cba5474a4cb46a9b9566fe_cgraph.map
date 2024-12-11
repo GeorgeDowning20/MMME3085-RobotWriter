@@ -1,0 +1,39 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,253,60,279"/>
+<area shape="rect" id="node2" href="$fontData_8c.html#a19965470aaa61bd4a1795fa5d855c9b4" title="Constructs and initializes a new fontData_t object." alt="" coords="108,253,263,279"/>
+<area shape="rect" id="node13" href="$main_8c.html#a0ee45546e9f510fb68e89596795b4d6f" title="Prompts the user for a file name and attempts to open it for reading." alt="" coords="136,57,235,83"/>
+<area shape="rect" id="node14" href="$main_8c.html#a6a32935e5adad5596ab72f5157f09000" title="Prompts the user to enter a desired text height and converts it into a scale factor." alt="" coords="130,139,241,166"/>
+<area shape="rect" id="node15" href="$gcode_8c.html#a44ba85fdeef6e4fb50e27ec96de1f736" title="Processes a text file using the provided font data." alt="" coords="119,607,251,634"/>
+<area shape="rect" id="node34" href="$robot_8c.html#a08fa3e29a2722f3a9cb440f3883a5566" title="Initializes and starts up the robot." alt="" coords="319,1089,429,1115"/>
+<area shape="rect" id="node3" href="$fontData_8c.html#ac0b2ffe66e9981ba5b31a1b3a5d4c1cb" title="Frees all memory allocated for the font data, including the hash table and its contents." alt="" coords="347,278,401,305"/>
+<area shape="rect" id="node4" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="935,506,1039,533"/>
+<area shape="rect" id="node5" href="$fontData_8c.html#ae4a312d71725a88111461319b5991a10" title="Inserts a font character into the hash table." alt="" coords="341,177,407,203"/>
+<area shape="rect" id="node7" href="$fontData_8c.html#a2df7b9501d858fb603602d9f347ec32b" title="Looks up a font character in the hash table by ASCII key." alt="" coords="338,126,410,153"/>
+<area shape="rect" id="node8" href="$fontData_8c.html#a8bd89c8b268a23116986d894cc8efe0c" title="Parses the font file and populates the hash table with font characters." alt="" coords="341,379,407,406"/>
+<area shape="rect" id="node12" href="$fontData_8c.html#a16ca292d5c313c59a91c12c67d3d5a3c" title="Scales all strokes in the font data by a given factor." alt="" coords="343,481,405,507"/>
+<area shape="rect" id="node6" href="$fontData_8c.html#a4fea98c9f13927078b0353ad14860438" title="Hash function for converting a character key into an index." alt="" coords="516,126,636,153"/>
+<area shape="rect" id="node9" href="$fontChar_8c.html#a456baedfa389ab308959d42234d26c99" title="Constructs and initializes a new fontCharacter_t object." alt="" coords="502,379,650,406"/>
+<area shape="rect" id="node10" href="$fontChar_8c.html#aa686165c9e06428bb42095cd9da1c646" title="Appends a single stroke to a fontCharacter_t object." alt="" coords="735,379,854,406"/>
+<area shape="rect" id="node11" href="$fontChar_8c.html#a52c7c85f6b59489920974e2a467d1574" title="Frees the memory allocated for a fontCharacter_t object." alt="" coords="767,430,822,457"/>
+<area shape="rect" id="node16" href="$gcode_8c.html#ad752fe57ef57309b894a1e29b1be17f6" title="Generates G&#45;code commands based on the provided text using the given font data." alt="" coords="311,709,437,735"/>
+<area shape="rect" id="node33" href="$robot_8c.html#a027fcf39d775ebede070e699b2b43828" title="Moves the robot to its home position." alt="" coords="527,1038,625,1065"/>
+<area shape="rect" id="node17" href="$cursor_8c.html#ac9206024f47e097a8c24cd2cdfa7234f" title="Constructs and initializes a new cursor_t object." alt="" coords="507,785,645,811"/>
+<area shape="rect" id="node26" href="$robot_8c.html#aad90fa0e55a1c01b398f24b6b5285e8d" title="Sends a stroke command to the robot based on the current cursor position." alt="" coords="531,987,621,1014"/>
+<area shape="rect" id="node18" href="$cursor_8c.html#a28f88c371fa702d0ff93c682e2686cf7" title="Moves the cursor to the start of the current line (carriage return)." alt="" coords="734,683,855,710"/>
+<area shape="rect" id="node19" href="$cursor_8c.html#abae14e94f199f0a08c0d21080564e52e" title="Moves the cursor by a specified delta." alt="" coords="761,987,828,1014"/>
+<area shape="rect" id="node22" href="$cursor_8c.html#a512b5b1efe20e69fcbfc7525ba3b2dc0" title="Moves the cursor to a new line." alt="" coords="755,734,835,761"/>
+<area shape="rect" id="node23" href="$cursor_8c.html#acbd74b57e2f2b6852d13f61c905d82fc" title="Sets the cursor to a specified position." alt="" coords="770,886,819,913"/>
+<area shape="rect" id="node24" href="$cursor_8c.html#a7a85519c0c8c138cb884fdac97049cd0" title="Checks if the given word would overflow the current cursor boundaries." alt="" coords="722,835,867,862"/>
+<area shape="rect" id="node25" href="$cursor_8c.html#ae6cd8baec7e9a446d286b99ba00781c4" title="Updates the cursor position after advancing by one character." alt="" coords="757,785,832,811"/>
+<area shape="rect" id="node20" href="$cursor_8c.html#afe2261ec63130405e2211af6c13accec" title="Checks if the current cursor position is within defined boundaries." alt="" coords="923,937,1051,963"/>
+<area shape="rect" id="node21" href="$coord_8h.html#a5bc8e590b6856be3e274cde788d2428a" title="Adds two 2D coordinates." alt="" coords="935,1013,1038,1039"/>
+<area shape="rect" id="node27" href="$robot_8c.html#a7491b87f64cad2b3f2e418e256ab78f0" title="Sends a command buffer to the robot and waits for a reply." alt="" coords="731,1089,859,1115"/>
+<area shape="rect" id="node28" href="$serial_8c.html#a81685016bdf8b33327c0effc3946c23f" title=" " alt="" coords="941,1215,1032,1242"/>
+<area shape="rect" id="node31" href="$serial_8c.html#a41ebffe26e5aa854de06af059212be92" title=" " alt="" coords="933,1089,1041,1115"/>
+<area shape="rect" id="node29" href="$rs232_8c.html#a179396991e5d9e3ef1be67e6f03038a6" title=" " alt="" coords="1121,1215,1227,1242"/>
+<area shape="rect" id="node30" href="$rs232_8c.html#ad8d4dbe7691e53e178360403228d650b" title=" " alt="" coords="1297,1215,1429,1242"/>
+<area shape="rect" id="node32" href="$rs232_8c.html#af66e3a0fc5eb7defb43aa61487a0b895" title=" " alt="" coords="1099,1114,1249,1141"/>
+<area shape="rect" id="node35" href="$serial_8c.html#a0829987208dfc68af3bcd380c0a78bd8" title=" " alt="" coords="485,1190,667,1217"/>
+<area shape="rect" id="node37" href="$serial_8c.html#a426a0a125a3cbb0989b6f6bed4e229b1" title=" " alt="" coords="931,1139,1042,1166"/>
+<area shape="rect" id="node36" href="$rs232_8c.html#a8387633166c515d774ad158ba266d06a" title=" " alt="" coords="715,1190,875,1217"/>
+</map>

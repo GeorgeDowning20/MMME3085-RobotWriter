@@ -1,0 +1,9 @@
+<map id="_iswithinBounds" name="_iswithinBounds">
+<area shape="rect" id="node1" title="Checks if the current cursor position is within defined boundaries." alt="" coords="763,31,891,57"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#abae14e94f199f0a08c0d21080564e52e" title="Moves the cursor by a specified delta." alt="" coords="648,5,715,32"/>
+<area shape="rect" id="node7" href="$cursor_8c.html#acbd74b57e2f2b6852d13f61c905d82fc" title="Sets the cursor to a specified position." alt="" coords="657,56,706,83"/>
+<area shape="rect" id="node3" href="$cursor_8c.html#ac9206024f47e097a8c24cd2cdfa7234f" title="Constructs and initializes a new cursor_t object." alt="" coords="463,31,600,57"/>
+<area shape="rect" id="node4" href="$gcode_8c.html#ad752fe57ef57309b894a1e29b1be17f6" title="Generates G&#45;code commands based on the provided text using the given font data." alt="" coords="288,31,415,57"/>
+<area shape="rect" id="node5" href="$gcode_8c.html#a44ba85fdeef6e4fb50e27ec96de1f736" title="Processes a text file using the provided font data." alt="" coords="108,31,240,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,31,60,57"/>
+</map>

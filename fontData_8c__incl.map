@@ -1,0 +1,12 @@
+<map id="RobotWriter/font/fontData.c" name="RobotWriter/font/fontData.c">
+<area shape="rect" id="node1" title="Implementation of font data handling, including hashing, insertion, lookup, scaling,..." alt="" coords="70,5,273,32"/>
+<area shape="rect" id="node2" href="$fontData_8h.html" title="Declarations for managing font data, including a hash table for storing font characters." alt="" coords="126,80,217,107"/>
+<area shape="rect" id="node3" href="$error_8h.html" title="Defines error codes and a function to handle and log these errors." alt="" coords="5,304,116,331"/>
+<area shape="rect" id="node5" href="$fontChar_8h.html" title="Declarations and definitions related to the fontCharacter_t structure and its operations." alt="" coords="236,155,325,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="27,379,94,405"/>
+<area shape="rect" id="node6" href="$cursor_8h.html" title="Declaration of the cursor_t structure and associated functions." alt="" coords="121,229,243,256"/>
+<area shape="rect" id="node8" href="$coord_8h.html" title="Defines the Coord2D_t structure for representing 2D coordinates and provides inline functions for bas..." alt="" coords="247,304,365,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="319,229,389,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="413,229,484,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="141,304,223,331"/>
+</map>

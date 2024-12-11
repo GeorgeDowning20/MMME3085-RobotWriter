@@ -1,0 +1,5 @@
+<map id="_set" name="_set">
+<area shape="rect" id="node1" title="Sets the cursor to a specified position." alt="" coords="5,31,55,57"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#afe2261ec63130405e2211af6c13accec" title="Checks if the current cursor position is within defined boundaries." alt="" coords="103,5,231,32"/>
+<area shape="rect" id="node3" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="115,56,219,83"/>
+</map>

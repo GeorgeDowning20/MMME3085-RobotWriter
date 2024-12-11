@@ -1,0 +1,7 @@
+<map id="_newline" name="_newline">
+<area shape="rect" id="node1" title="Moves the cursor to a new line." alt="" coords="648,5,728,32"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#ac9206024f47e097a8c24cd2cdfa7234f" title="Constructs and initializes a new cursor_t object." alt="" coords="463,5,600,32"/>
+<area shape="rect" id="node3" href="$gcode_8c.html#ad752fe57ef57309b894a1e29b1be17f6" title="Generates G&#45;code commands based on the provided text using the given font data." alt="" coords="288,5,415,32"/>
+<area shape="rect" id="node4" href="$gcode_8c.html#a44ba85fdeef6e4fb50e27ec96de1f736" title="Processes a text file using the provided font data." alt="" coords="108,5,240,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,32"/>
+</map>

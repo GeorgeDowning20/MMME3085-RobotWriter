@@ -1,0 +1,7 @@
+<map id="_parse" name="_parse">
+<area shape="rect" id="node1" title="Parses the font file and populates the hash table with font characters." alt="" coords="5,5,71,32"/>
+<area shape="rect" id="node2" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="481,31,585,57"/>
+<area shape="rect" id="node3" href="$fontChar_8c.html#a456baedfa389ab308959d42234d26c99" title="Constructs and initializes a new fontCharacter_t object." alt="" coords="119,31,267,57"/>
+<area shape="rect" id="node4" href="$fontChar_8c.html#aa686165c9e06428bb42095cd9da1c646" title="Appends a single stroke to a fontCharacter_t object." alt="" coords="315,56,433,83"/>
+<area shape="rect" id="node5" href="$fontChar_8c.html#a52c7c85f6b59489920974e2a467d1574" title="Frees the memory allocated for a fontCharacter_t object." alt="" coords="347,107,401,133"/>
+</map>

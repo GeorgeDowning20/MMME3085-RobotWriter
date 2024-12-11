@@ -1,0 +1,13 @@
+<map id="RobotWriter/font/fontChar.h" name="RobotWriter/font/fontChar.h">
+<area shape="rect" id="node1" title="Declarations and definitions related to the fontCharacter_t structure and its operations." alt="" coords="230,5,431,32"/>
+<area shape="rect" id="node2" href="$fontChar_8c.html" title="Implementation of fontCharacter_t construction, stroke appending, and memory management." alt="" coords="5,80,205,107"/>
+<area shape="rect" id="node3" href="$fontData_8h.html" title="Declarations for managing font data, including a hash table for storing font characters." alt="" coords="229,80,432,107"/>
+<area shape="rect" id="node9" href="$robot_8h.html" title="Declarations for robot control functions and related constants." alt="" coords="482,80,670,107"/>
+<area shape="rect" id="node4" href="$fontData_8c.html" title="Implementation of font data handling, including hashing, insertion, lookup, scaling,..." alt="" coords="67,155,269,181"/>
+<area shape="rect" id="node5" href="$main_8h.html" title="Main configuration header for setting up the robot and font data environment." alt="" coords="435,229,584,256"/>
+<area shape="rect" id="node7" href="$gcode_8h.html" title="Declarations for text processing functions that utilize font data and robot movement." alt="" coords="345,155,538,181"/>
+<area shape="rect" id="node6" href="$main_8c.html" title="Entry point for the robot text drawing application." alt="" coords="435,304,583,331"/>
+<area shape="rect" id="node8" href="$gcode_8c.html" title="Implementation of text processing functions that generate G&#45;code from text using font data." alt="" coords="219,229,411,256"/>
+<area shape="rect" id="node10" href="$cursor_8c.html" title="Implementation of the cursor_t structure and related operations." alt="" coords="613,155,805,181"/>
+<area shape="rect" id="node11" href="$robot_8c.html" title="Implementation of robot control functions for positioning and movement." alt="" coords="829,155,1016,181"/>
+</map>

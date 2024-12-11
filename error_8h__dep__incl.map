@@ -1,0 +1,15 @@
+<map id="RobotWriter/misc/error.h" name="RobotWriter/misc/error.h">
+<area shape="rect" id="node1" title="Defines error codes and a function to handle and log these errors." alt="" coords="530,5,711,32"/>
+<area shape="rect" id="node2" href="$fontData_8h.html" title="Declarations for managing font data, including a hash table for storing font characters." alt="" coords="155,229,358,256"/>
+<area shape="rect" id="node4" href="$main_8h.html" title="Main configuration header for setting up the robot and font data environment." alt="" coords="414,379,563,405"/>
+<area shape="rect" id="node6" href="$gcode_8h.html" title="Declarations for text processing functions that utilize font data and robot movement." alt="" coords="5,304,199,331"/>
+<area shape="rect" id="node8" href="$cursor_8h.html" title="Declaration of the cursor_t structure and associated functions." alt="" coords="659,80,852,107"/>
+<area shape="rect" id="node11" href="$robot_8h.html" title="Declarations for robot control functions and related constants." alt="" coords="607,229,795,256"/>
+<area shape="rect" id="node3" href="$fontData_8c.html" title="Implementation of font data handling, including hashing, insertion, lookup, scaling,..." alt="" coords="223,304,426,331"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="Entry point for the robot text drawing application." alt="" coords="415,453,563,480"/>
+<area shape="rect" id="node7" href="$gcode_8c.html" title="Implementation of text processing functions that generate G&#45;code from text using font data." alt="" coords="6,379,198,405"/>
+<area shape="rect" id="node9" href="$fontChar_8h.html" title="Declarations and definitions related to the fontCharacter_t structure and its operations." alt="" coords="381,155,583,181"/>
+<area shape="rect" id="node12" href="$cursor_8c.html" title="Implementation of the cursor_t structure and related operations." alt="" coords="762,304,954,331"/>
+<area shape="rect" id="node10" href="$fontChar_8c.html" title="Implementation of fontCharacter_t construction, stroke appending, and memory management." alt="" coords="382,229,582,256"/>
+<area shape="rect" id="node13" href="$robot_8c.html" title="Implementation of robot control functions for positioning and movement." alt="" coords="551,304,738,331"/>
+</map>

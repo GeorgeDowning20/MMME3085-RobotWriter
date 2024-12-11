@@ -1,0 +1,6 @@
+<map id="_move" name="_move">
+<area shape="rect" id="node1" title="Moves the cursor by a specified delta." alt="" coords="5,56,72,83"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#afe2261ec63130405e2211af6c13accec" title="Checks if the current cursor position is within defined boundaries." alt="" coords="120,5,248,32"/>
+<area shape="rect" id="node3" href="$coord_8h.html#a5bc8e590b6856be3e274cde788d2428a" title="Adds two 2D coordinates." alt="" coords="133,56,235,83"/>
+<area shape="rect" id="node4" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="132,107,236,133"/>
+</map>

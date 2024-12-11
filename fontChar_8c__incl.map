@@ -1,0 +1,11 @@
+<map id="RobotWriter/font/fontChar.c" name="RobotWriter/font/fontChar.c">
+<area shape="rect" id="node1" title="Implementation of fontCharacter_t construction, stroke appending, and memory management." alt="" coords="232,5,432,32"/>
+<area shape="rect" id="node2" href="$fontChar_8h.html" title="Declarations and definitions related to the fontCharacter_t structure and its operations." alt="" coords="287,80,377,107"/>
+<area shape="rect" id="node3" href="$cursor_8h.html" title="Declaration of the cursor_t structure and associated functions." alt="" coords="127,155,249,181"/>
+<area shape="rect" id="node5" href="$coord_8h.html" title="Defines the Coord2D_t structure for representing 2D coordinates and provides inline functions for bas..." alt="" coords="248,229,365,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="334,155,405,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="429,155,499,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,229,88,256"/>
+<area shape="rect" id="node6" href="$error_8h.html" title="Defines error codes and a function to handle and log these errors." alt="" coords="113,229,223,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="135,304,201,331"/>
+</map>

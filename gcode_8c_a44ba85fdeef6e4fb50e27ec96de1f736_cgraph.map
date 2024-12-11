@@ -1,0 +1,22 @@
+<map id="process_text_file" name="process_text_file">
+<area shape="rect" id="node1" title="Processes a text file using the provided font data." alt="" coords="5,181,137,208"/>
+<area shape="rect" id="node2" href="$error_8h.html#a46ae3737b6b20a442370723dace4b3e6" title="Handles and logs the given error code." alt="" coords="751,105,855,132"/>
+<area shape="rect" id="node3" href="$gcode_8c.html#ad752fe57ef57309b894a1e29b1be17f6" title="Generates G&#45;code commands based on the provided text using the given font data." alt="" coords="185,181,312,208"/>
+<area shape="rect" id="node20" href="$robot_8c.html#a027fcf39d775ebede070e699b2b43828" title="Moves the robot to its home position." alt="" coords="199,333,298,360"/>
+<area shape="rect" id="node4" href="$cursor_8c.html#ac9206024f47e097a8c24cd2cdfa7234f" title="Constructs and initializes a new cursor_t object." alt="" coords="360,181,497,208"/>
+<area shape="rect" id="node13" href="$robot_8c.html#aad90fa0e55a1c01b398f24b6b5285e8d" title="Sends a stroke command to the robot based on the current cursor position." alt="" coords="383,358,474,385"/>
+<area shape="rect" id="node5" href="$cursor_8c.html#a28f88c371fa702d0ff93c682e2686cf7" title="Moves the cursor to the start of the current line (carriage return)." alt="" coords="557,54,679,81"/>
+<area shape="rect" id="node6" href="$cursor_8c.html#abae14e94f199f0a08c0d21080564e52e" title="Moves the cursor by a specified delta." alt="" coords="585,257,651,284"/>
+<area shape="rect" id="node9" href="$cursor_8c.html#a512b5b1efe20e69fcbfc7525ba3b2dc0" title="Moves the cursor to a new line." alt="" coords="578,105,658,132"/>
+<area shape="rect" id="node10" href="$cursor_8c.html#acbd74b57e2f2b6852d13f61c905d82fc" title="Sets the cursor to a specified position." alt="" coords="593,206,643,233"/>
+<area shape="rect" id="node11" href="$cursor_8c.html#a7a85519c0c8c138cb884fdac97049cd0" title="Checks if the given word would overflow the current cursor boundaries." alt="" coords="545,308,691,334"/>
+<area shape="rect" id="node12" href="$cursor_8c.html#ae6cd8baec7e9a446d286b99ba00781c4" title="Updates the cursor position after advancing by one character." alt="" coords="581,156,655,182"/>
+<area shape="rect" id="node7" href="$cursor_8c.html#afe2261ec63130405e2211af6c13accec" title="Checks if the current cursor position is within defined boundaries." alt="" coords="739,238,867,265"/>
+<area shape="rect" id="node8" href="$coord_8h.html#a5bc8e590b6856be3e274cde788d2428a" title="Adds two 2D coordinates." alt="" coords="751,314,854,341"/>
+<area shape="rect" id="node14" href="$robot_8c.html#a7491b87f64cad2b3f2e418e256ab78f0" title="Sends a command buffer to the robot and waits for a reply." alt="" coords="554,409,682,436"/>
+<area shape="rect" id="node15" href="$serial_8c.html#a81685016bdf8b33327c0effc3946c23f" title=" " alt="" coords="757,377,848,404"/>
+<area shape="rect" id="node18" href="$serial_8c.html#a41ebffe26e5aa854de06af059212be92" title=" " alt="" coords="749,428,857,454"/>
+<area shape="rect" id="node16" href="$rs232_8c.html#a179396991e5d9e3ef1be67e6f03038a6" title=" " alt="" coords="937,377,1043,404"/>
+<area shape="rect" id="node17" href="$rs232_8c.html#ad8d4dbe7691e53e178360403228d650b" title=" " alt="" coords="1113,377,1245,404"/>
+<area shape="rect" id="node19" href="$rs232_8c.html#af66e3a0fc5eb7defb43aa61487a0b895" title=" " alt="" coords="915,428,1065,454"/>
+</map>

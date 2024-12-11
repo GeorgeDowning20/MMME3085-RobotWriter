@@ -1,0 +1,12 @@
+<map id="RobotWriter/lib/rs232.h" name="RobotWriter/lib/rs232.h">
+<area shape="rect" id="node1" title=" " alt="" coords="261,5,433,32"/>
+<area shape="rect" id="node2" href="$rs232_8c.html" title=" " alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node3" href="$serial_8c.html" title=" " alt="" coords="200,80,371,107"/>
+<area shape="rect" id="node4" href="$main_8h.html" title="Main configuration header for setting up the robot and font data environment." alt="" coords="384,229,533,256"/>
+<area shape="rect" id="node6" href="$robot_8h.html" title="Declarations for robot control functions and related constants." alt="" coords="498,80,686,107"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="Entry point for the robot text drawing application." alt="" coords="385,304,533,331"/>
+<area shape="rect" id="node7" href="$cursor_8c.html" title="Implementation of the cursor_t structure and related operations." alt="" coords="496,155,688,181"/>
+<area shape="rect" id="node8" href="$gcode_8h.html" title="Declarations for text processing functions that utilize font data and robot movement." alt="" coords="713,155,906,181"/>
+<area shape="rect" id="node10" href="$robot_8c.html" title="Implementation of robot control functions for positioning and movement." alt="" coords="931,155,1117,181"/>
+<area shape="rect" id="node9" href="$gcode_8c.html" title="Implementation of text processing functions that generate G&#45;code from text using font data." alt="" coords="713,229,905,256"/>
+</map>

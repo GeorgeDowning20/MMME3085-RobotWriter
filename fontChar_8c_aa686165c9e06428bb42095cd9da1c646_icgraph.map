@@ -1,0 +1,7 @@
+<map id="_appendStroke" name="_appendStroke">
+<area shape="rect" id="node1" title="Appends a single stroke to a fontCharacter_t object." alt="" coords="620,5,739,32"/>
+<area shape="rect" id="node2" href="$fontChar_8c.html#a456baedfa389ab308959d42234d26c99" title="Constructs and initializes a new fontCharacter_t object." alt="" coords="424,5,572,32"/>
+<area shape="rect" id="node3" href="$fontData_8c.html#a8bd89c8b268a23116986d894cc8efe0c" title="Parses the font file and populates the hash table with font characters." alt="" coords="311,5,376,32"/>
+<area shape="rect" id="node4" href="$fontData_8c.html#a19965470aaa61bd4a1795fa5d855c9b4" title="Constructs and initializes a new fontData_t object." alt="" coords="108,5,263,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,32"/>
+</map>

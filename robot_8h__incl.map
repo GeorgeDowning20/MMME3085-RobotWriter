@@ -1,0 +1,15 @@
+<map id="RobotWriter/robot/robot.h" name="RobotWriter/robot/robot.h">
+<area shape="rect" id="node1" title="Declarations for robot control functions and related constants." alt="" coords="201,5,389,32"/>
+<area shape="rect" id="node2" href="$rs232_8h.html" title=" " alt="" coords="144,80,247,107"/>
+<area shape="rect" id="node6" href="$serial_8h.html" title=" " alt="" coords="5,80,108,107"/>
+<area shape="rect" id="node7" href="$fontChar_8h.html" title="Declarations and definitions related to the fontCharacter_t structure and its operations." alt="" coords="427,80,558,107"/>
+<area shape="rect" id="node8" href="$cursor_8h.html" title="Declaration of the cursor_t structure and associated functions." alt="" coords="333,155,455,181"/>
+<area shape="rect" id="node11" href="$error_8h.html" title="Defines error codes and a function to handle and log these errors." alt="" coords="204,229,315,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="97,304,163,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="21,155,92,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="167,155,258,181"/>
+<area shape="rect" id="node10" href="$coord_8h.html" title="Defines the Coord2D_t structure for representing 2D coordinates and provides inline functions for bas..." alt="" coords="446,229,563,256"/>
+<area shape="rect" id="node12" title=" " alt="" coords="531,155,601,181"/>
+<area shape="rect" id="node13" title=" " alt="" coords="625,155,696,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="339,229,422,256"/>
+</map>

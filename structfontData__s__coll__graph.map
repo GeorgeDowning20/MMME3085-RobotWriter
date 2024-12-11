@@ -1,0 +1,7 @@
+<map id="fontData_s" name="fontData_s">
+<area shape="rect" id="node1" title="Structure representing font data, including a hash table." alt="" coords="21,363,115,389"/>
+<area shape="rect" id="node2" href="$structfontCharacter__s.html" title="Structure representing a font character." alt="" coords="5,184,131,211"/>
+<area shape="rect" id="node5" href="$structhashNode__s.html" title="Node in the hash table for storing font characters." alt="" coords="119,273,220,300"/>
+<area shape="rect" id="node3" href="$structstroke__s.html" title="Structure representing a single stroke of a character." alt="" coords="30,95,106,121"/>
+<area shape="rect" id="node4" href="$structCoord2D__s.html" title="Represents a point in 2D space." alt="" coords="22,5,114,32"/>
+</map>
