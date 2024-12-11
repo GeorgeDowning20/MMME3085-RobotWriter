@@ -63,8 +63,8 @@ int main(void)
     fontData_t *fontData = fontDataConstructor();
 
     // Start up the robot
-    // if (StartUpRobot() != SUCCESS)
-        // exit(EXIT_FAILURE);
+    if (StartUpRobot() != SUCCESS)
+        exit(EXIT_FAILURE);
 
     // Parse the font file
     if (fontData->parse(fontData, FONT_FILE) != SUCCESS)

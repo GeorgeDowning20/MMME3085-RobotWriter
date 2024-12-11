@@ -41,7 +41,7 @@ errorCode_t HomeRobot(void)
 {
     char buffer[256];                                                                                   // Buffer to hold command
     snprintf(buffer, sizeof(buffer), "S0 G0 X%.2lf Y%.2lf ; Home\n", HOME_X_VALUE_MM, HOME_Y_VALUE_MM); // Construct command
-    // SendCommands(buffer);                                                                               // Send command
+    SendCommands(buffer);                                                                               // Send command
     printf("%s", buffer);                                                                               // Print command
 
     return SUCCESS; // Return success
@@ -61,7 +61,7 @@ errorCode_t SendStoke(const cursor_t *const cursor, const stroke_t stroke)
     const char *command = stroke.pen_state ? "S1000 G1" : "S0 G0";                 // Set command based on pen state
     char buffer[256];                                                              // Buffer to hold command
     snprintf(buffer, sizeof(buffer), "%s X%.2lf Y%.2lf\n", command, pos.x, pos.y); // Construct command
-    // SendCommands(buffer);                                                          // Send command
+    SendCommands(buffer);                                                          // Send command
     printf("%s", buffer);                                                          // Print command
     return SUCCESS;
 }
