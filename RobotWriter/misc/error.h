@@ -14,7 +14,6 @@
 //                        PUBLIC   DECLARATIONS                      //
 ///////////////////////////////////////////////////////////////////////
 
-
 /**
  * @enum errorCode_e
  * @brief Defines various error codes returned by functions within the application.

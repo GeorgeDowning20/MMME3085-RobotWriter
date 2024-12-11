@@ -11,7 +11,6 @@
 //                        PUBLIC   DECLARATIONS                      //
 ///////////////////////////////////////////////////////////////////////
 
-
 /**
  * @struct Coord2D_s
  * @brief Represents a point in 2D space.

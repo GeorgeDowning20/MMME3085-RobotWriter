@@ -21,9 +21,9 @@
 //                        PUBLIC   DEFINITIONS                       //
 ///////////////////////////////////////////////////////////////////////
 
-#define MAX_X_VALUE_MM 100.0   /**< Maximum X coordinate value in millimeters. */
-#define MAX_Y_VALUE_MM 0       /**< Maximum Y coordinate value in millimeters. */
-#define MIN_X_VALUE_MM 0       /**< Minimum X coordinate value in millimeters. */
+#define MAX_X_VALUE_MM 100.0  /**< Maximum X coordinate value in millimeters. */
+#define MAX_Y_VALUE_MM 0      /**< Maximum Y coordinate value in millimeters. */
+#define MIN_X_VALUE_MM 0      /**< Minimum X coordinate value in millimeters. */
 #define MIN_Y_VALUE_MM -500.0 /**< Minimum Y coordinate value in millimeters. */
 
 #define HOME_X_VALUE_MM 0.0 /**< Home position X coordinate in millimeters. */

@@ -44,9 +44,9 @@ errorCode_t HomeRobot(void)
 
 #ifdef Serial_Mode
     SendCommands(buffer); // Send command
-#endif       
-                                                                       // Send command
-    printf("%s", buffer);                                                                               // Print command
+#endif
+                          // Send command
+    printf("%s", buffer); // Print command
 
     return SUCCESS; // Return success
 }
@@ -123,4 +123,3 @@ static errorCode_t SendCommands(char *const buffer)
     Sleep(1);                // Wait for reply
     return SUCCESS;          // Return success
 }
-
